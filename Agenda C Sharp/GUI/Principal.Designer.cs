@@ -62,20 +62,21 @@
             // contatoToolStripMenuItem
             // 
             this.contatoToolStripMenuItem.Name = "contatoToolStripMenuItem";
-            this.contatoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contatoToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.contatoToolStripMenuItem.Text = "Contato";
             // 
             // telefoneToolStripMenuItem
             // 
             this.telefoneToolStripMenuItem.Name = "telefoneToolStripMenuItem";
-            this.telefoneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.telefoneToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.telefoneToolStripMenuItem.Text = "Telefone";
             // 
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.usuárioToolStripMenuItem.Text = "Usuário";
+            this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -128,6 +129,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela Principal";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.menuStrip1.ResumeLayout(false);

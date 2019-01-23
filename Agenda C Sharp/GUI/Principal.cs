@@ -21,5 +21,10 @@ namespace Agenda_C_Sharp.GUI {
         private void timer1_Tick(object sender, EventArgs e) {
             lblHora.Text = "Hora: " + DateTime.Now.ToLongTimeString();
         }
+
+        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e) {
+            FormUsuario form = new FormUsuario();
+            form.ShowDialog();
+        }
     }
 }
