@@ -1,4 +1,4 @@
-﻿namespace Agenda_C_Sharp {
+﻿namespace Agenda_C_Sharp.GUI {
     partial class Principal {
         /// <summary>
         /// Variável de designer necessária.

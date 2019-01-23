@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Agenda_C_Sharp {
+namespace Agenda_C_Sharp.GUI {
     public partial class Principal : Form {
         public Principal() {
             InitializeComponent();
         }
+        
     }
 }
