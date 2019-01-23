@@ -13,6 +13,13 @@ namespace Agenda_C_Sharp.GUI {
         public Principal() {
             InitializeComponent();
         }
-        
+
+        private void Principal_Load(object sender, EventArgs e) {
+            lblData.Text = "Data: " + DateTime.Now.ToShortDateString();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e) {
+            lblHora.Text = "Hora: " + DateTime.Now.ToLongTimeString();
+        }
     }
 }
