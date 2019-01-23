@@ -81,8 +81,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dao\ContatoDao.cs" />
     <Compile Include="dao\ICrudDao.cs" />
     <Compile Include="dao\RepositoryCrudDao.cs" />
+    <Compile Include="dao\TelefoneDao.cs" />
+    <Compile Include="dao\UsuarioDao.cs" />
     <Compile Include="GUI\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
