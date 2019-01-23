@@ -14,7 +14,7 @@ CREATE DATABASE agenda
 USE AGENDA;
 
 CREATE TABLE CONTATO(
-	id integer NOT NULL,
+	id serial NOT NULL,
     nome character varying(100),
     endereco character varying(100),
     bairro character varying(50),
@@ -28,7 +28,7 @@ CREATE TABLE CONTATO(
 );
 
 CREATE TABLE TELEFONE(
-	id integer NOT NULL,
+	id serial NOT NULL,
     id_contato integer NOT NULL,
     telefone integer,
     email character varying(255),
@@ -40,7 +40,7 @@ CREATE TABLE TELEFONE(
 );
 
 CREATE TABLE USUARIO(
-	id integer NOT NULL,
+	id serial NOT NULL,
     nome character varying(100),
     login character varying(20),
     senha character varying(20),
