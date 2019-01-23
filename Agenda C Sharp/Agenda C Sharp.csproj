@@ -87,6 +87,9 @@
     <Compile Include="GUI\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mapeamento\ContatoMap.cs" />
+    <Compile Include="Mapeamento\TelefoneMap.cs" />
+    <Compile Include="Mapeamento\UsuarioMap.cs" />
     <Compile Include="model\Contato.cs" />
     <Compile Include="model\Telefone.cs" />
     <Compile Include="model\Usuario.cs" />
