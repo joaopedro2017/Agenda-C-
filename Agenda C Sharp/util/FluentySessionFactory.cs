@@ -15,7 +15,8 @@ namespace Agenda_C_Sharp.util {
             }
 
             IPersistenceConfigurer configBD = PostgreSQLConfiguration.PostgreSQL82.ConnectionString(ConnectionString);
-            var configMap = Fluently.Configure().Database(configBD).Mappings(c => c.FluentMappings.AddFromAssemblyOf<Mapeamento.ContatosMap>());
+            var configMap = Fluently.Configure().Database(configBD).Mappings(
+                c => c.FluentMappings.AddFromAssemblyOf<Mapeamento.ContatoMap>());
             session = configMap.BuildSessionFactory();
 
             return session;
