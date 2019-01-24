@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,8 +37,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbManutencao = new System.Windows.Forms.GroupBox();
+            this.gbRegistros = new System.Windows.Forms.GroupBox();
             this.dgvDados = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,9 +52,11 @@
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.gbManutencao.SuspendLayout();
+            this.gbRegistros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSenha
@@ -108,30 +111,31 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Senha:";
             // 
-            // groupBox2
+            // gbManutencao
             // 
-            this.groupBox2.Controls.Add(this.txtLogin);
-            this.groupBox2.Controls.Add(this.txtSenha);
-            this.groupBox2.Controls.Add(this.txtNome);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 217);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(623, 139);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Manutenção";
+            this.gbManutencao.Controls.Add(this.txtLogin);
+            this.gbManutencao.Controls.Add(this.txtSenha);
+            this.gbManutencao.Controls.Add(this.txtNome);
+            this.gbManutencao.Controls.Add(this.label3);
+            this.gbManutencao.Controls.Add(this.label1);
+            this.gbManutencao.Controls.Add(this.label2);
+            this.gbManutencao.Enabled = false;
+            this.gbManutencao.Location = new System.Drawing.Point(12, 217);
+            this.gbManutencao.Name = "gbManutencao";
+            this.gbManutencao.Size = new System.Drawing.Size(623, 139);
+            this.gbManutencao.TabIndex = 10;
+            this.gbManutencao.TabStop = false;
+            this.gbManutencao.Text = "Manutenção";
             // 
-            // groupBox1
+            // gbRegistros
             // 
-            this.groupBox1.Controls.Add(this.dgvDados);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(623, 183);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Registros";
+            this.gbRegistros.Controls.Add(this.dgvDados);
+            this.gbRegistros.Location = new System.Drawing.Point(12, 12);
+            this.gbRegistros.Name = "gbRegistros";
+            this.gbRegistros.Size = new System.Drawing.Size(623, 183);
+            this.gbRegistros.TabIndex = 11;
+            this.gbRegistros.TabStop = false;
+            this.gbRegistros.Text = "Registros";
             // 
             // dgvDados
             // 
@@ -274,6 +278,7 @@
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnAtualizar
             // 
@@ -320,18 +325,22 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 419);
+            this.ClientSize = new System.Drawing.Size(647, 418);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnAtualizar);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbRegistros);
+            this.Controls.Add(this.gbManutencao);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnSalvar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -340,10 +349,11 @@
             this.Name = "FormUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Usuário";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.gbManutencao.ResumeLayout(false);
+            this.gbManutencao.PerformLayout();
+            this.gbRegistros.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,8 +368,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbManutencao;
+        private System.Windows.Forms.GroupBox gbRegistros;
         private System.Windows.Forms.DataGridView dgvDados;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
@@ -371,5 +381,6 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
