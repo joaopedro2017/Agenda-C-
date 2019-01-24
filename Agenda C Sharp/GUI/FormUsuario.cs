@@ -1,17 +1,13 @@
 ﻿using Agenda_C_Sharp.dao;
 using Agenda_C_Sharp.model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Agenda_C_Sharp.GUI {
     public partial class FormUsuario : Form {
+
+        private UsuarioDao dao;
+
         public FormUsuario() {
             InitializeComponent();
         }
@@ -23,7 +19,7 @@ namespace Agenda_C_Sharp.GUI {
             us.senha = txtSenha.Text;
             us.status = "A";
 
-            UsuarioDao dao = new UsuarioDao();
+            dao = new UsuarioDao();
             dao.Inserir(us);
         }
 
@@ -31,6 +27,6 @@ namespace Agenda_C_Sharp.GUI {
             if (MessageBox.Show("Deseja sair?", "Fechamento!", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 == DialogResult.Yes)
                 Close();
-        }
+        }       
     }
 }
