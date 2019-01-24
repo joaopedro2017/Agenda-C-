@@ -24,19 +24,20 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.telefoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblData = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.telefoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -59,24 +60,38 @@
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
-            // contatoToolStripMenuItem
+            // statusStrip1
             // 
-            this.contatoToolStripMenuItem.Name = "contatoToolStripMenuItem";
-            this.contatoToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.contatoToolStripMenuItem.Text = "Contato";
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblData,
+            this.lblHora});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 401);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(751, 22);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
             // 
-            // telefoneToolStripMenuItem
+            // lblData
             // 
-            this.telefoneToolStripMenuItem.Name = "telefoneToolStripMenuItem";
-            this.telefoneToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.telefoneToolStripMenuItem.Text = "Telefone";
+            this.lblData.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblData.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(39, 17);
+            this.lblData.Text = "Data: ";
             // 
-            // usuárioToolStripMenuItem
+            // lblHora
             // 
-            this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.usuárioToolStripMenuItem.Text = "Usuário";
-            this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
+            this.lblHora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblHora.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(37, 17);
+            this.lblHora.Text = "Hora:";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pictureBox1
             // 
@@ -85,58 +100,57 @@
             this.pictureBox1.Image = global::Agenda_C_Sharp.Properties.Resources.Pen3;
             this.pictureBox1.Location = new System.Drawing.Point(0, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(751, 487);
+            this.pictureBox1.Size = new System.Drawing.Size(751, 399);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // statusStrip1
+            // contatoToolStripMenuItem
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblData,
-            this.lblHora});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 489);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(751, 22);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
+            this.contatoToolStripMenuItem.Image = global::Agenda_C_Sharp.Properties.Resources.contacts_icon;
+            this.contatoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.contatoToolStripMenuItem.Name = "contatoToolStripMenuItem";
+            this.contatoToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.contatoToolStripMenuItem.Text = "Contato";
             // 
-            // lblData
+            // telefoneToolStripMenuItem
             // 
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(46, 17);
-            this.lblData.Text = "            .";
+            this.telefoneToolStripMenuItem.Image = global::Agenda_C_Sharp.Properties.Resources.phone_icon;
+            this.telefoneToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.telefoneToolStripMenuItem.Name = "telefoneToolStripMenuItem";
+            this.telefoneToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.telefoneToolStripMenuItem.Text = "Telefone";
             // 
-            // lblHora
+            // usuárioToolStripMenuItem
             // 
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(58, 17);
-            this.lblHora.Text = "                .";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.usuárioToolStripMenuItem.Image = global::Agenda_C_Sharp.Properties.Resources.Office_Customer_Male_Light_icon;
+            this.usuárioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.usuárioToolStripMenuItem.Text = "Usuário";
+            this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 511);
+            this.ClientSize = new System.Drawing.Size(751, 423);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela Principal";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

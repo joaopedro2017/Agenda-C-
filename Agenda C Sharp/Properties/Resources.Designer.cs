@@ -73,9 +73,39 @@ namespace Agenda_C_Sharp.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap contacts_icon {
+            get {
+                object obj = ResourceManager.GetObject("contacts-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Office_Customer_Male_Light_icon {
+            get {
+                object obj = ResourceManager.GetObject("Office-Customer-Male-Light-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pen3 {
             get {
                 object obj = ResourceManager.GetObject("Pen3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phone_icon {
+            get {
+                object obj = ResourceManager.GetObject("phone-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
