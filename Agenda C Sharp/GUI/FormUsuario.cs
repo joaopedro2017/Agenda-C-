@@ -8,7 +8,7 @@ namespace Agenda_C_Sharp.GUI {
 
         private UsuarioDao dao;
         private int IDRegistro = 0;
-        private enum Tipo { insert, update, reload}
+        private enum Tipo { insert, update, reload }
         private Tipo tipo;
 
         public FormUsuario() {
@@ -29,7 +29,7 @@ namespace Agenda_C_Sharp.GUI {
                 errorProvider1.SetError(txtSenha, "Preencha o campo Senha.");
                 return;
             }
-            
+
             try {
                 dao = new UsuarioDao();
                 Usuario us = new Usuario {
@@ -39,17 +39,17 @@ namespace Agenda_C_Sharp.GUI {
                     status = "A"
                 };
 
-                if(tipo == Tipo.update) {
+                if (tipo == Tipo.update) {
                     us.id = IDRegistro;
                     dao.Alterar(us);
                     MessageBox.Show("Atualizado com Sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                
+
                 dao.Inserir(us);
                 MessageBox.Show("Usuário salvo com Sucesso", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
             } catch (Exception ex) {
-                if(tipo == Tipo.update) {
+                if (tipo == Tipo.update) {
                     MessageBox.Show("Erro ao atualizar Usuário!" + ex.Message, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
@@ -80,6 +80,20 @@ namespace Agenda_C_Sharp.GUI {
             txtLogin.Text = dgvDados.CurrentRow.Cells[2].Value.ToString();
             txtNome.Text = dgvDados.CurrentRow.Cells[1].Value.ToString();
             txtSenha.Text = dgvDados.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e) {
+            if (dgvDados.RowCount > 0) {
+                try {
+                    dao = new UsuarioDao();
+                    Usuario us = dao.retornaPorId(Convert.ToInt32(dgvDados.CurrentRow.Cells[0].Value));
+                    dao.Excluir(us);
+                    MessageBox.Show("Registro excluido com Sucesso", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                } catch (Exception ex) {
+                    MessageBox.Show("Erro ao excluir" + ex.Message, "Excluir",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
