@@ -27,6 +27,11 @@ namespace Agenda_C_Sharp.GUI {
             if (MessageBox.Show("Deseja sair?", "Fechamento!", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 == DialogResult.Yes)
                 Close();
-        }       
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e) {
+            dao = new UsuarioDao();
+            dgvDados.DataSource = dao.Consultar();
+        }
     }
 }
