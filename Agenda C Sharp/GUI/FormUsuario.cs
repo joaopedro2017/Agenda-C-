@@ -38,7 +38,7 @@ namespace Agenda_C_Sharp.GUI {
                 }
             }
 
-            try {                
+            try {
                 Usuario us = new Usuario {
                     login = txtLogin.Text,
                     nome = txtNome.Text,
@@ -71,13 +71,18 @@ namespace Agenda_C_Sharp.GUI {
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e) {
-            dao = new UsuarioDao();
-            dgvDados.DataSource = dao.Consultar();
+            CarregarRegistros();
+            tipo = Tipo.update;
+            habilitarDesabilitarBotoes();
+            if (dgvDados.Rows.Count > 0)
+                gbManutencao.Enabled = true;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e) {
-            tipo = Tipo.insert;
             gbManutencao.Enabled = true;
+            tipo = Tipo.insert;
+            habilitarDesabilitarBotoes();
+            txtNome.Focus();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e) {
@@ -90,12 +95,16 @@ namespace Agenda_C_Sharp.GUI {
         }
 
         private void btnExcluir_Click(object sender, EventArgs e) {
-            if (dgvDados.RowCount > 0) {
+            int qntLinhas = dgvDados.RowCount;
+            if (qntLinhas > 0) {
                 try {
                     dao = new UsuarioDao();
                     Usuario us = dao.retornaPorId(Convert.ToInt32(dgvDados.CurrentRow.Cells[0].Value));
                     dao.Excluir(us);
                     MessageBox.Show("Registro excluido com Sucesso", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnAtualizar_Click(sender, e);
+                    if (qntLinhas == 1)
+                        btnCancelar_Click(sender, e);
                 } catch (Exception ex) {
                     MessageBox.Show("Erro ao excluir" + ex.Message, "Excluir",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -104,6 +113,28 @@ namespace Agenda_C_Sharp.GUI {
         }
 
         private void btnCancelar_Click(object sender, EventArgs e) {
+            tipo = Tipo.reload;
+            limpar();
+            dgvDados.DataSource = String.Empty;
+            gbManutencao.Enabled = false;
+            habilitarDesabilitarBotoes();
+        }
+
+        private void habilitarDesabilitarBotoes() {
+            btnSalvar.Enabled = tipo == Tipo.insert || tipo == Tipo.update;
+            btnAlterar.Enabled = dgvDados.Rows.Count > 0 && (tipo == Tipo.update || tipo == Tipo.insert);
+            btnExcluir.Enabled = dgvDados.Rows.Count > 0 && (tipo == Tipo.update || tipo == Tipo.insert);
+            btnCadastrar.Enabled = tipo == Tipo.reload;
+        }
+
+        private void CarregarRegistros() {
+            if (dao == null) {
+                dao = new UsuarioDao();
+            }
+            dgvDados.DataSource = dao.Consultar();
+        }
+
+        public void limpar() {
             txtLogin.Text = string.Empty;
             txtNome.Text = string.Empty;
             txtSenha.Text = string.Empty;
