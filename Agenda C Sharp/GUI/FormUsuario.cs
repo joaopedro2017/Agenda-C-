@@ -30,8 +30,15 @@ namespace Agenda_C_Sharp.GUI {
                 return;
             }
 
-            try {
-                dao = new UsuarioDao();
+            dao = new UsuarioDao();
+            if (tipo == Tipo.insert) {
+                if (dao.validarLogin(txtLogin.Text.Trim())) {
+                    MessageBox.Show("Login encontra-se cadastrado!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
+            try {                
                 Usuario us = new Usuario {
                     login = txtLogin.Text,
                     nome = txtNome.Text,
@@ -94,6 +101,14 @@ namespace Agenda_C_Sharp.GUI {
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e) {
+            txtLogin.Text = string.Empty;
+            txtNome.Text = string.Empty;
+            txtSenha.Text = string.Empty;
+            IDRegistro = 0;
+            txtNome.Focus();
         }
     }
 }
