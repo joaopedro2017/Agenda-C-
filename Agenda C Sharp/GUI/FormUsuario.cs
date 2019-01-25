@@ -1,6 +1,8 @@
 ﻿using Agenda_C_Sharp.dao;
 using Agenda_C_Sharp.model;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Agenda_C_Sharp.GUI {
@@ -131,7 +133,11 @@ namespace Agenda_C_Sharp.GUI {
             if (dao == null) {
                 dao = new UsuarioDao();
             }
-            dgvDados.DataSource = dao.Consultar();
+            IList<Usuario> list = dao.Consultar();
+            IEnumerable<Usuario> sortEnum = list.OrderBy(u => u.nome);
+            IList<Usuario> sortList = sortEnum.ToList();
+
+            dgvDados.DataSource = sortList;
         }
 
         public void limpar() {
