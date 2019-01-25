@@ -133,10 +133,20 @@ namespace Agenda_C_Sharp.GUI {
             if (dao == null) {
                 dao = new UsuarioDao();
             }
-            IList<Usuario> list = dao.Consultar();
-            IEnumerable<Usuario> sortEnum = list.OrderBy(u => u.nome);
-            IList<Usuario> sortList = sortEnum.ToList();
 
+            if (rbSemOrdem.Checked) {
+                dgvDados.DataSource = dao.Consultar();
+                return;
+            }
+
+            IList<Usuario> list = dao.Consultar();
+            IEnumerable<Usuario> sortEnum = null;
+            if (rbNome.Checked) {
+                sortEnum = list.OrderBy(u => u.nome);
+            } else {
+                sortEnum = list.OrderBy(u => u.id);
+            }
+            IList<Usuario> sortList = sortEnum.ToList();
             dgvDados.DataSource = sortList;
         }
 

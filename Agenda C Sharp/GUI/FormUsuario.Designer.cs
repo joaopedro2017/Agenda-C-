@@ -53,41 +53,46 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.gbOrdem = new System.Windows.Forms.GroupBox();
+            this.rbNome = new System.Windows.Forms.RadioButton();
+            this.rbLogin = new System.Windows.Forms.RadioButton();
+            this.rbSemOrdem = new System.Windows.Forms.RadioButton();
             this.gbManutencao.SuspendLayout();
             this.gbRegistros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.gbOrdem.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(72, 88);
+            this.txtSenha.Location = new System.Drawing.Point(69, 82);
             this.txtSenha.MaxLength = 20;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(517, 20);
+            this.txtSenha.Size = new System.Drawing.Size(406, 20);
             this.txtSenha.TabIndex = 1;
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(72, 62);
+            this.txtLogin.Location = new System.Drawing.Point(69, 56);
             this.txtLogin.MaxLength = 20;
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(517, 20);
+            this.txtLogin.Size = new System.Drawing.Size(406, 20);
             this.txtLogin.TabIndex = 2;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(72, 36);
+            this.txtNome.Location = new System.Drawing.Point(69, 30);
             this.txtNome.MaxLength = 100;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(517, 20);
+            this.txtNome.Size = new System.Drawing.Size(406, 20);
             this.txtNome.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 39);
+            this.label1.Location = new System.Drawing.Point(27, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 5;
@@ -96,7 +101,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 65);
+            this.label2.Location = new System.Drawing.Point(27, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 6;
@@ -105,7 +110,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 91);
+            this.label3.Location = new System.Drawing.Point(27, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 7;
@@ -122,7 +127,7 @@
             this.gbManutencao.Enabled = false;
             this.gbManutencao.Location = new System.Drawing.Point(12, 217);
             this.gbManutencao.Name = "gbManutencao";
-            this.gbManutencao.Size = new System.Drawing.Size(623, 139);
+            this.gbManutencao.Size = new System.Drawing.Size(500, 115);
             this.gbManutencao.TabIndex = 10;
             this.gbManutencao.TabStop = false;
             this.gbManutencao.Text = "Manutenção";
@@ -335,11 +340,56 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // gbOrdem
+            // 
+            this.gbOrdem.Controls.Add(this.rbSemOrdem);
+            this.gbOrdem.Controls.Add(this.rbLogin);
+            this.gbOrdem.Controls.Add(this.rbNome);
+            this.gbOrdem.Location = new System.Drawing.Point(518, 217);
+            this.gbOrdem.Name = "gbOrdem";
+            this.gbOrdem.Size = new System.Drawing.Size(114, 115);
+            this.gbOrdem.TabIndex = 17;
+            this.gbOrdem.TabStop = false;
+            this.gbOrdem.Text = "Ordenar por:";
+            // 
+            // rbNome
+            // 
+            this.rbNome.AutoSize = true;
+            this.rbNome.Location = new System.Drawing.Point(20, 32);
+            this.rbNome.Name = "rbNome";
+            this.rbNome.Size = new System.Drawing.Size(53, 17);
+            this.rbNome.TabIndex = 0;
+            this.rbNome.Text = "Nome";
+            this.rbNome.UseVisualStyleBackColor = true;
+            // 
+            // rbLogin
+            // 
+            this.rbLogin.AutoSize = true;
+            this.rbLogin.Location = new System.Drawing.Point(20, 55);
+            this.rbLogin.Name = "rbLogin";
+            this.rbLogin.Size = new System.Drawing.Size(51, 17);
+            this.rbLogin.TabIndex = 1;
+            this.rbLogin.Text = "Login";
+            this.rbLogin.UseVisualStyleBackColor = true;
+            // 
+            // rbSemOrdem
+            // 
+            this.rbSemOrdem.AutoSize = true;
+            this.rbSemOrdem.Checked = true;
+            this.rbSemOrdem.Location = new System.Drawing.Point(20, 78);
+            this.rbSemOrdem.Name = "rbSemOrdem";
+            this.rbSemOrdem.Size = new System.Drawing.Size(80, 17);
+            this.rbSemOrdem.TabIndex = 2;
+            this.rbSemOrdem.TabStop = true;
+            this.rbSemOrdem.Text = "Sem Ordem";
+            this.rbSemOrdem.UseVisualStyleBackColor = true;
+            // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(647, 418);
+            this.Controls.Add(this.gbOrdem);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
@@ -349,6 +399,7 @@
             this.Controls.Add(this.gbManutencao);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnSalvar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -360,6 +411,8 @@
             this.gbRegistros.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.gbOrdem.ResumeLayout(false);
+            this.gbOrdem.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -388,5 +441,9 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.GroupBox gbOrdem;
+        private System.Windows.Forms.RadioButton rbSemOrdem;
+        private System.Windows.Forms.RadioButton rbLogin;
+        private System.Windows.Forms.RadioButton rbNome;
     }
 }
