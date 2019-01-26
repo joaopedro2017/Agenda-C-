@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormContato));
             this.gbRegistros = new System.Windows.Forms.GroupBox();
             this.gbManutencao = new System.Windows.Forms.GroupBox();
@@ -40,7 +40,7 @@
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
-            this.cmEstado = new System.Windows.Forms.ComboBox();
+            this.cbmEstado = new System.Windows.Forms.ComboBox();
             this.dgvDados = new System.Windows.Forms.DataGridView();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -79,7 +79,7 @@
             // gbManutencao
             // 
             this.gbManutencao.Controls.Add(this.txtCep);
-            this.gbManutencao.Controls.Add(this.cmEstado);
+            this.gbManutencao.Controls.Add(this.cbmEstado);
             this.gbManutencao.Controls.Add(this.txtBairro);
             this.gbManutencao.Controls.Add(this.txtEndereco);
             this.gbManutencao.Controls.Add(this.txtCidade);
@@ -139,7 +139,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(318, 35);
+            this.label5.Location = new System.Drawing.Point(334, 35);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 13);
             this.label5.TabIndex = 4;
@@ -148,7 +148,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(337, 61);
+            this.label6.Location = new System.Drawing.Point(353, 61);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 5;
@@ -157,7 +157,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(343, 87);
+            this.label7.Location = new System.Drawing.Point(359, 87);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 13);
             this.label7.TabIndex = 6;
@@ -186,23 +186,23 @@
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(380, 32);
+            this.txtEndereco.Location = new System.Drawing.Point(396, 28);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(205, 20);
             this.txtEndereco.TabIndex = 10;
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(380, 58);
+            this.txtBairro.Location = new System.Drawing.Point(396, 54);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(205, 20);
             this.txtBairro.TabIndex = 11;
             // 
-            // cmEstado
+            // cbmEstado
             // 
-            this.cmEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmEstado.FormattingEnabled = true;
-            this.cmEstado.Items.AddRange(new object[] {
+            this.cbmEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbmEstado.FormattingEnabled = true;
+            this.cbmEstado.Items.AddRange(new object[] {
             "AC",
             "AL",
             "AP",
@@ -228,10 +228,10 @@
             "SP",
             "SE",
             "TO"});
-            this.cmEstado.Location = new System.Drawing.Point(65, 106);
-            this.cmEstado.Name = "cmEstado";
-            this.cmEstado.Size = new System.Drawing.Size(42, 21);
-            this.cmEstado.TabIndex = 13;
+            this.cbmEstado.Location = new System.Drawing.Point(65, 106);
+            this.cbmEstado.Name = "cbmEstado";
+            this.cbmEstado.Size = new System.Drawing.Size(42, 21);
+            this.cbmEstado.TabIndex = 13;
             // 
             // dgvDados
             // 
@@ -239,8 +239,8 @@
             this.dgvDados.AllowUserToDeleteRows = false;
             this.dgvDados.AllowUserToResizeColumns = false;
             this.dgvDados.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
-            this.dgvDados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
+            this.dgvDados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDados.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvDados.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvDados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -362,7 +362,7 @@
             // 
             // txtCep
             // 
-            this.txtCep.Location = new System.Drawing.Point(380, 87);
+            this.txtCep.Location = new System.Drawing.Point(396, 80);
             this.txtCep.Mask = "00.000-000";
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(68, 20);
@@ -478,7 +478,7 @@
 
         private System.Windows.Forms.GroupBox gbRegistros;
         private System.Windows.Forms.GroupBox gbManutencao;
-        private System.Windows.Forms.ComboBox cmEstado;
+        private System.Windows.Forms.ComboBox cbmEstado;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.TextBox txtCidade;
