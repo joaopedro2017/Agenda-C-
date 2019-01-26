@@ -89,6 +89,7 @@
             this.gbManutencao.Controls.Add(this.label3);
             this.gbManutencao.Controls.Add(this.label2);
             this.gbManutencao.Controls.Add(this.label1);
+            this.gbManutencao.Enabled = false;
             this.gbManutencao.Location = new System.Drawing.Point(12, 175);
             this.gbManutencao.Name = "gbManutencao";
             this.gbManutencao.Size = new System.Drawing.Size(617, 164);
@@ -272,9 +273,11 @@
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnSalvar
             // 
+            this.btnSalvar.Enabled = false;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Image = global::Agenda_C_Sharp.Properties.Resources.Save_icon;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -288,6 +291,7 @@
             // 
             // btnAlterar
             // 
+            this.btnAlterar.Enabled = false;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Image = global::Agenda_C_Sharp.Properties.Resources.Actions_document_edit_icon;
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -301,6 +305,7 @@
             // 
             // btnExcluir
             // 
+            this.btnExcluir.Enabled = false;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Image = global::Agenda_C_Sharp.Properties.Resources.delete_file_icon;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
