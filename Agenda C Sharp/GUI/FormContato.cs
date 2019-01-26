@@ -62,10 +62,10 @@ namespace Agenda_C_Sharp.GUI {
             txtNome.Text = dgvDados.CurrentRow.Cells[1].Value.ToString();
             txtEndereco.Text = dgvDados.CurrentRow.Cells[2].Value.ToString();
             txtBairro.Text = dgvDados.CurrentRow.Cells[3].Value.ToString();
-            txtNumero.Text = dgvDados.CurrentRow.Cells[4].Value.ToString();
-            txtCep.Text = dgvDados.CurrentRow.Cells[5].Value.ToString();
-            txtCidade.Text = dgvDados.CurrentRow.Cells[6].Value.ToString();
-            cbmEstado.Text = dgvDados.CurrentRow.Cells[7].Value.ToString();
+            txtNumero.Text = dgvDados.CurrentRow.Cells[6].Value.ToString();
+            txtCep.Text = dgvDados.CurrentRow.Cells[7].Value.ToString();
+            txtCidade.Text = dgvDados.CurrentRow.Cells[4].Value.ToString();
+            cbmEstado.Text = dgvDados.CurrentRow.Cells[5].Value.ToString();
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e) {
@@ -74,6 +74,38 @@ namespace Agenda_C_Sharp.GUI {
             habilitarDesabilitarBotoes();
             if (dgvDados.Rows.Count > 0)
                 gbManutencao.Enabled = true;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e) {
+            int qntLinhas = dgvDados.RowCount;
+            if (qntLinhas > 0) {
+                try {
+                    dao = new ContatoDao();
+                    Contato cont = dao.retornaPorId(Convert.ToInt32(dgvDados.CurrentRow.Cells[0].Value));
+                    dao.Excluir(cont);
+                    MessageBox.Show("Registro excluido com Sucesso", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnAtualizar_Click(sender, e);
+                    if (qntLinhas == 1)
+                        btnCancelar_Click(sender, e);
+                } catch (Exception ex) {
+                    MessageBox.Show("Erro ao excluir" + ex.Message, "Excluir",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e) {
+            tipo = Tipo.reload;
+            limpar();
+            dgvDados.DataSource = String.Empty;
+            gbManutencao.Enabled = false;
+            habilitarDesabilitarBotoes();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e) {
+            if (MessageBox.Show("Deseja sair?", "Fechamento!", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                == DialogResult.Yes)
+                Close();
         }
 
         private void habilitarDesabilitarBotoes() {
@@ -122,5 +154,19 @@ namespace Agenda_C_Sharp.GUI {
             }
             return "CERTO";
         }
+
+        private void limpar() {            
+            txtNome.Text = string.Empty;
+            txtEndereco.Text = string.Empty;
+            txtNumero.Text = string.Empty;
+            txtBairro.Text = string.Empty;
+            txtCidade.Text = string.Empty;
+            txtCep.Text = string.Empty;            
+
+            IDRegistro = 0;
+            txtNome.Focus();
+        }
+
+        
     }
 }
