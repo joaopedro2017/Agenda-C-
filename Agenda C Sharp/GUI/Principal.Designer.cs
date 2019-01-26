@@ -65,15 +65,16 @@
             this.contatoToolStripMenuItem.Image = global::Agenda_C_Sharp.Properties.Resources.contacts_icon;
             this.contatoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.contatoToolStripMenuItem.Name = "contatoToolStripMenuItem";
-            this.contatoToolStripMenuItem.Size = new System.Drawing.Size(135, 38);
+            this.contatoToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
             this.contatoToolStripMenuItem.Text = "Contato";
+            this.contatoToolStripMenuItem.Click += new System.EventHandler(this.contatoToolStripMenuItem_Click);
             // 
             // telefoneToolStripMenuItem
             // 
             this.telefoneToolStripMenuItem.Image = global::Agenda_C_Sharp.Properties.Resources.phone_icon;
             this.telefoneToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.telefoneToolStripMenuItem.Name = "telefoneToolStripMenuItem";
-            this.telefoneToolStripMenuItem.Size = new System.Drawing.Size(135, 38);
+            this.telefoneToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
             this.telefoneToolStripMenuItem.Text = "Telefone";
             // 
             // usuárioToolStripMenuItem
@@ -81,7 +82,7 @@
             this.usuárioToolStripMenuItem.Image = global::Agenda_C_Sharp.Properties.Resources.Office_Customer_Male_Light_icon;
             this.usuárioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(135, 38);
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
             this.usuárioToolStripMenuItem.Text = "Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 

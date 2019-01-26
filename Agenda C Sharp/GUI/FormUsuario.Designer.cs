@@ -40,11 +40,6 @@
             this.gbManutencao = new System.Windows.Forms.GroupBox();
             this.gbRegistros = new System.Windows.Forms.GroupBox();
             this.dgvDados = new System.Windows.Forms.DataGridView();
-            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
@@ -54,9 +49,14 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbOrdem = new System.Windows.Forms.GroupBox();
-            this.rbNome = new System.Windows.Forms.RadioButton();
-            this.rbLogin = new System.Windows.Forms.RadioButton();
             this.rbSemOrdem = new System.Windows.Forms.RadioButton();
+            this.rbLogin = new System.Windows.Forms.RadioButton();
+            this.rbNome = new System.Windows.Forms.RadioButton();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbManutencao.SuspendLayout();
             this.gbRegistros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
@@ -164,7 +164,7 @@
             this.dgvDados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Código,
+            this.Codigo,
             this.Nome,
             this.Login,
             this.Senha,
@@ -186,51 +186,6 @@
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDados.Size = new System.Drawing.Size(617, 164);
             this.dgvDados.TabIndex = 0;
-            // 
-            // Código
-            // 
-            this.Código.DataPropertyName = "id";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Código.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Código.HeaderText = "Código";
-            this.Código.Name = "Código";
-            this.Código.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "nome";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Nome.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 280;
-            // 
-            // Login
-            // 
-            this.Login.DataPropertyName = "login";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Login.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Login.HeaderText = "Login";
-            this.Login.Name = "Login";
-            this.Login.ReadOnly = true;
-            this.Login.Width = 200;
-            // 
-            // Senha
-            // 
-            this.Senha.DataPropertyName = "senha";
-            this.Senha.HeaderText = "Senha";
-            this.Senha.Name = "Senha";
-            this.Senha.ReadOnly = true;
-            this.Senha.Visible = false;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Visible = false;
             // 
             // btnCancelar
             // 
@@ -352,26 +307,6 @@
             this.gbOrdem.TabStop = false;
             this.gbOrdem.Text = "Ordenar por:";
             // 
-            // rbNome
-            // 
-            this.rbNome.AutoSize = true;
-            this.rbNome.Location = new System.Drawing.Point(20, 32);
-            this.rbNome.Name = "rbNome";
-            this.rbNome.Size = new System.Drawing.Size(53, 17);
-            this.rbNome.TabIndex = 0;
-            this.rbNome.Text = "Nome";
-            this.rbNome.UseVisualStyleBackColor = true;
-            // 
-            // rbLogin
-            // 
-            this.rbLogin.AutoSize = true;
-            this.rbLogin.Location = new System.Drawing.Point(20, 55);
-            this.rbLogin.Name = "rbLogin";
-            this.rbLogin.Size = new System.Drawing.Size(51, 17);
-            this.rbLogin.TabIndex = 1;
-            this.rbLogin.Text = "Login";
-            this.rbLogin.UseVisualStyleBackColor = true;
-            // 
             // rbSemOrdem
             // 
             this.rbSemOrdem.AutoSize = true;
@@ -383,6 +318,71 @@
             this.rbSemOrdem.TabStop = true;
             this.rbSemOrdem.Text = "Sem Ordem";
             this.rbSemOrdem.UseVisualStyleBackColor = true;
+            // 
+            // rbLogin
+            // 
+            this.rbLogin.AutoSize = true;
+            this.rbLogin.Location = new System.Drawing.Point(20, 55);
+            this.rbLogin.Name = "rbLogin";
+            this.rbLogin.Size = new System.Drawing.Size(51, 17);
+            this.rbLogin.TabIndex = 1;
+            this.rbLogin.Text = "Login";
+            this.rbLogin.UseVisualStyleBackColor = true;
+            // 
+            // rbNome
+            // 
+            this.rbNome.AutoSize = true;
+            this.rbNome.Location = new System.Drawing.Point(20, 32);
+            this.rbNome.Name = "rbNome";
+            this.rbNome.Size = new System.Drawing.Size(53, 17);
+            this.rbNome.TabIndex = 0;
+            this.rbNome.Text = "Nome";
+            this.rbNome.UseVisualStyleBackColor = true;
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "id";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Codigo.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "nome";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Nome.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 280;
+            // 
+            // Login
+            // 
+            this.Login.DataPropertyName = "login";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Login.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Login.HeaderText = "Login";
+            this.Login.Name = "Login";
+            this.Login.ReadOnly = true;
+            this.Login.Width = 200;
+            // 
+            // Senha
+            // 
+            this.Senha.DataPropertyName = "senha";
+            this.Senha.HeaderText = "Senha";
+            this.Senha.Name = "Senha";
+            this.Senha.ReadOnly = true;
+            this.Senha.Visible = false;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Visible = false;
             // 
             // FormUsuario
             // 
@@ -431,11 +431,6 @@
         private System.Windows.Forms.GroupBox gbRegistros;
         private System.Windows.Forms.DataGridView dgvDados;
         private System.Windows.Forms.Button btnAtualizar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Código;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Login;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Senha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnExcluir;
@@ -445,5 +440,10 @@
         private System.Windows.Forms.RadioButton rbSemOrdem;
         private System.Windows.Forms.RadioButton rbLogin;
         private System.Windows.Forms.RadioButton rbNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Login;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Senha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }
