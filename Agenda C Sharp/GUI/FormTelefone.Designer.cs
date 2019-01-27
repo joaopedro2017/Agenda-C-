@@ -326,6 +326,7 @@
             this.Name = "FormTelefone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contatos";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormTelefone_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbCadastrar.ResumeLayout(false);
