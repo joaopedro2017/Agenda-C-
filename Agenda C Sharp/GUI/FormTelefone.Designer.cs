@@ -46,8 +46,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.cbxPesquisa = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbCadastrar.SuspendLayout();
@@ -153,12 +153,14 @@
             // 
             // cbxContato
             // 
+            this.cbxContato.DisplayMember = "nome";
             this.cbxContato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxContato.FormattingEnabled = true;
             this.cbxContato.Location = new System.Drawing.Point(73, 27);
             this.cbxContato.Name = "cbxContato";
             this.cbxContato.Size = new System.Drawing.Size(297, 21);
             this.cbxContato.TabIndex = 1;
+            this.cbxContato.ValueMember = "id";
             // 
             // label5
             // 
@@ -253,9 +255,10 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbxPesquisa);
             this.panel1.Controls.Add(this.btnPesquisar);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 16);
             this.panel1.Name = "panel1";
@@ -266,6 +269,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 56);
@@ -283,15 +287,6 @@
             this.label10.TabIndex = 4;
             this.label10.Text = "Contato:";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(83, 11);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(230, 21);
-            this.comboBox1.TabIndex = 3;
-            // 
             // btnPesquisar
             // 
             this.btnPesquisar.BackColor = System.Drawing.Color.White;
@@ -304,6 +299,17 @@
             this.btnPesquisar.TabIndex = 5;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            // 
+            // cbxPesquisa
+            // 
+            this.cbxPesquisa.DisplayMember = "nome";
+            this.cbxPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPesquisa.FormattingEnabled = true;
+            this.cbxPesquisa.Location = new System.Drawing.Point(83, 11);
+            this.cbxPesquisa.Name = "cbxPesquisa";
+            this.cbxPesquisa.Size = new System.Drawing.Size(232, 21);
+            this.cbxPesquisa.TabIndex = 6;
+            this.cbxPesquisa.ValueMember = "id";
             // 
             // FormTelefone
             // 
@@ -326,6 +332,7 @@
             this.Name = "FormTelefone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contatos";
+            this.Load += new System.EventHandler(this.FormTelefone_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormTelefone_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -365,6 +372,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxPesquisa;
     }
 }
