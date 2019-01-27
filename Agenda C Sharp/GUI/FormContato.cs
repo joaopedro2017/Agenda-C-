@@ -26,6 +26,15 @@ namespace Agenda_C_Sharp.GUI {
             if (ValidarCampos() == "ERRO") {
                 return;
             }
+
+            dao = new ContatoDao();
+            if (tipo == Tipo.insert) {
+                if (dao.validarNome(txtNome.Text.Trim())) {
+                    MessageBox.Show("Nome encontra-se cadastrado!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
             try {
                 Contato cont = new Contato {
                     nome = txtNome.Text,
@@ -37,7 +46,7 @@ namespace Agenda_C_Sharp.GUI {
                     estado = cbmEstado.Text,
                     status = "A"
                 };
-                dao = new ContatoDao();
+                
                 if (tipo == Tipo.update) {
                     cont.id = IDRegistro;
                     dao.Alterar(cont);
@@ -166,7 +175,6 @@ namespace Agenda_C_Sharp.GUI {
             IDRegistro = 0;
             txtNome.Focus();
         }
-
         
     }
 }
