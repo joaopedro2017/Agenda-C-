@@ -24,5 +24,10 @@ namespace Agenda_C_Sharp.GUI {
             FormContato form = new FormContato();
             form.ShowDialog();
         }
+
+        private void telefoneToolStripMenuItem_Click(object sender, EventArgs e) {
+            FormTelefone form = new FormTelefone();
+            form.ShowDialog();
+        }
     }
 }

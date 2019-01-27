@@ -43,7 +43,7 @@ namespace Agenda_C_Sharp.GUI {
                     numero = txtNumero.Text.Trim(),
                     cep = txtCep.Text,
                     cidade = txtCidade.Text.Trim(),
-                    estado = cbmEstado.Text,
+                    estado = cbxEstado.Text,
                     status = "A"
                 };
                 
@@ -74,7 +74,7 @@ namespace Agenda_C_Sharp.GUI {
             txtNumero.Text = dgvDados.CurrentRow.Cells[6].Value.ToString();
             txtCep.Text = dgvDados.CurrentRow.Cells[7].Value.ToString();
             txtCidade.Text = dgvDados.CurrentRow.Cells[4].Value.ToString();
-            cbmEstado.Text = dgvDados.CurrentRow.Cells[5].Value.ToString();
+            cbxEstado.Text = dgvDados.CurrentRow.Cells[5].Value.ToString();
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e) {
@@ -157,8 +157,8 @@ namespace Agenda_C_Sharp.GUI {
                 errorProvider1.SetError(txtCep, "Preencha o campo Cep.");
                 return "ERRO";
             }
-            if (cbmEstado.Text == "") {
-                errorProvider1.SetError(cbmEstado, "Selecione o estado.");
+            if (cbxEstado.Text == "") {
+                errorProvider1.SetError(cbxEstado, "Selecione o estado.");
                 return "ERRO";
             }
             return "CERTO";
@@ -171,7 +171,7 @@ namespace Agenda_C_Sharp.GUI {
             txtBairro.Text = string.Empty;
             txtCidade.Text = string.Empty;
             txtCep.Text = string.Empty;
-            cbmEstado.SelectedIndex = -1;
+            cbxEstado.SelectedIndex = -1;
             IDRegistro = 0;
             txtNome.Focus();
         }        

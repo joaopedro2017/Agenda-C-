@@ -133,6 +133,26 @@ namespace Agenda_C_Sharp.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Male_user_edit_icon {
+            get {
+                object obj = ResourceManager.GetObject("Male-user-edit-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Male_user_search_icon {
+            get {
+                object obj = ResourceManager.GetObject("Male-user-search-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Office_Customer_Male_Light_icon {
             get {
                 object obj = ResourceManager.GetObject("Office-Customer-Male-Light-icon", resourceCulture);

@@ -76,6 +76,7 @@
             this.telefoneToolStripMenuItem.Name = "telefoneToolStripMenuItem";
             this.telefoneToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
             this.telefoneToolStripMenuItem.Text = "Telefone";
+            this.telefoneToolStripMenuItem.Click += new System.EventHandler(this.telefoneToolStripMenuItem_Click);
             // 
             // usuárioToolStripMenuItem
             // 

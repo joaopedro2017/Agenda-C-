@@ -39,7 +39,7 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbManutencao = new System.Windows.Forms.GroupBox();
             this.txtCep = new System.Windows.Forms.MaskedTextBox();
-            this.cbmEstado = new System.Windows.Forms.ComboBox();
+            this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
@@ -181,7 +181,7 @@
             // gbManutencao
             // 
             this.gbManutencao.Controls.Add(this.txtCep);
-            this.gbManutencao.Controls.Add(this.cbmEstado);
+            this.gbManutencao.Controls.Add(this.cbxEstado);
             this.gbManutencao.Controls.Add(this.txtBairro);
             this.gbManutencao.Controls.Add(this.txtEndereco);
             this.gbManutencao.Controls.Add(this.txtCidade);
@@ -211,11 +211,11 @@
             this.txtCep.TabIndex = 14;
             this.txtCep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // cbmEstado
+            // cbxEstado
             // 
-            this.cbmEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbmEstado.FormattingEnabled = true;
-            this.cbmEstado.Items.AddRange(new object[] {
+            this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEstado.FormattingEnabled = true;
+            this.cbxEstado.Items.AddRange(new object[] {
             "AC",
             "AL",
             "AP",
@@ -241,10 +241,10 @@
             "SP",
             "SE",
             "TO"});
-            this.cbmEstado.Location = new System.Drawing.Point(65, 106);
-            this.cbmEstado.Name = "cbmEstado";
-            this.cbmEstado.Size = new System.Drawing.Size(42, 21);
-            this.cbmEstado.TabIndex = 13;
+            this.cbxEstado.Location = new System.Drawing.Point(65, 106);
+            this.cbxEstado.Name = "cbxEstado";
+            this.cbxEstado.Size = new System.Drawing.Size(42, 21);
+            this.cbxEstado.TabIndex = 13;
             // 
             // txtBairro
             // 
@@ -483,7 +483,7 @@
 
         private System.Windows.Forms.GroupBox gbRegistros;
         private System.Windows.Forms.GroupBox gbManutencao;
-        private System.Windows.Forms.ComboBox cbmEstado;
+        private System.Windows.Forms.ComboBox cbxEstado;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.TextBox txtCidade;
