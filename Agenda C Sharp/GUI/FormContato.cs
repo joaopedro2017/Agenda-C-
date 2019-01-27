@@ -37,12 +37,12 @@ namespace Agenda_C_Sharp.GUI {
 
             try {
                 Contato cont = new Contato {
-                    nome = txtNome.Text,
-                    endereco = txtEndereco.Text,
-                    bairro = txtBairro.Text,
-                    numero = txtNumero.Text,
+                    nome = txtNome.Text.Trim(),
+                    endereco = txtEndereco.Text.Trim(),
+                    bairro = txtBairro.Text.Trim(),
+                    numero = txtNumero.Text.Trim(),
                     cep = txtCep.Text,
-                    cidade = txtCidade.Text,
+                    cidade = txtCidade.Text.Trim(),
                     estado = cbmEstado.Text,
                     status = "A"
                 };
@@ -170,11 +170,10 @@ namespace Agenda_C_Sharp.GUI {
             txtNumero.Text = string.Empty;
             txtBairro.Text = string.Empty;
             txtCidade.Text = string.Empty;
-            txtCep.Text = string.Empty;            
-
+            txtCep.Text = string.Empty;
+            cbmEstado.SelectedIndex = -1;
             IDRegistro = 0;
             txtNome.Focus();
-        }
-        
+        }        
     }
 }
