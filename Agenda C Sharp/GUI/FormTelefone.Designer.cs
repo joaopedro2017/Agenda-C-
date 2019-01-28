@@ -30,8 +30,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbCadastrar = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cbxTipo = new System.Windows.Forms.ComboBox();
@@ -43,12 +41,10 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cbxContato = new System.Windows.Forms.ComboBox();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.gbPesquisar = new System.Windows.Forms.GroupBox();
             this.dgvContato = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbxPesquisa = new System.Windows.Forms.ComboBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Tefefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,13 +53,18 @@
             this.Site = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idContato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbCadastrar.SuspendLayout();
             this.gbPesquisar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContato)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -106,28 +107,6 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Pesquisar Contato";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::Agenda_C_Sharp.Properties.Resources.Male_user_search_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(415, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::Agenda_C_Sharp.Properties.Resources.Male_user_edit_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // gbCadastrar
             // 
             this.gbCadastrar.Controls.Add(this.label9);
@@ -143,7 +122,7 @@
             this.gbCadastrar.Controls.Add(this.btnSalvar);
             this.gbCadastrar.Location = new System.Drawing.Point(12, 98);
             this.gbCadastrar.Name = "gbCadastrar";
-            this.gbCadastrar.Size = new System.Drawing.Size(391, 208);
+            this.gbCadastrar.Size = new System.Drawing.Size(391, 224);
             this.gbCadastrar.TabIndex = 6;
             this.gbCadastrar.TabStop = false;
             this.gbCadastrar.Text = "Cadastro:";
@@ -239,28 +218,13 @@
             this.cbxContato.TabIndex = 0;
             this.cbxContato.ValueMember = "id";
             // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(280, 170);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(90, 28);
-            this.btnSalvar.TabIndex = 5;
-            this.btnSalvar.Text = "Cadastrar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
             // gbPesquisar
             // 
             this.gbPesquisar.Controls.Add(this.dgvContato);
             this.gbPesquisar.Controls.Add(this.panel1);
             this.gbPesquisar.Location = new System.Drawing.Point(415, 98);
             this.gbPesquisar.Name = "gbPesquisar";
-            this.gbPesquisar.Size = new System.Drawing.Size(436, 208);
+            this.gbPesquisar.Size = new System.Drawing.Size(436, 224);
             this.gbPesquisar.TabIndex = 7;
             this.gbPesquisar.TabStop = false;
             this.gbPesquisar.Text = "Pesquisar:";
@@ -284,24 +248,25 @@
             this.id,
             this.idContato});
             this.dgvContato.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvContato.Location = new System.Drawing.Point(3, 56);
+            this.dgvContato.Location = new System.Drawing.Point(3, 62);
             this.dgvContato.Name = "dgvContato";
             this.dgvContato.ReadOnly = true;
             this.dgvContato.RowHeadersVisible = false;
             this.dgvContato.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvContato.Size = new System.Drawing.Size(430, 149);
+            this.dgvContato.Size = new System.Drawing.Size(430, 159);
             this.dgvContato.TabIndex = 8;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnExcluir);
             this.panel1.Controls.Add(this.cbxPesquisa);
             this.panel1.Controls.Add(this.btnPesquisar);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 16);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 40);
+            this.panel1.Size = new System.Drawing.Size(430, 46);
             this.panel1.TabIndex = 0;
             // 
             // cbxPesquisa
@@ -311,24 +276,9 @@
             this.cbxPesquisa.FormattingEnabled = true;
             this.cbxPesquisa.Location = new System.Drawing.Point(61, 11);
             this.cbxPesquisa.Name = "cbxPesquisa";
-            this.cbxPesquisa.Size = new System.Drawing.Size(264, 21);
+            this.cbxPesquisa.Size = new System.Drawing.Size(191, 21);
             this.cbxPesquisa.TabIndex = 6;
             this.cbxPesquisa.ValueMember = "id";
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnPesquisar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisar.Location = new System.Drawing.Point(331, 6);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(90, 28);
-            this.btnPesquisar.TabIndex = 7;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // label10
             // 
@@ -392,12 +342,88 @@
             this.idContato.ReadOnly = true;
             this.idContato.Visible = false;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnExcluir.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnExcluir.Image = global::Agenda_C_Sharp.Properties.Resources.Actions_edit_delete_icon;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluir.Location = new System.Drawing.Point(352, 7);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(73, 34);
+            this.btnExcluir.TabIndex = 8;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnPesquisar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.ForeColor = System.Drawing.Color.White;
+            this.btnPesquisar.Image = global::Agenda_C_Sharp.Properties.Resources.search_icon;
+            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPesquisar.Location = new System.Drawing.Point(258, 7);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(88, 34);
+            this.btnPesquisar.TabIndex = 7;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.Image = global::Agenda_C_Sharp.Properties.Resources.Accept_icon__1_;
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.Location = new System.Drawing.Point(283, 170);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(87, 34);
+            this.btnSalvar.TabIndex = 5;
+            this.btnSalvar.Text = "Cadastrar";
+            this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = global::Agenda_C_Sharp.Properties.Resources.Male_user_search_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(415, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::Agenda_C_Sharp.Properties.Resources.Male_user_edit_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormTelefone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(862, 321);
+            this.ClientSize = new System.Drawing.Size(862, 335);
             this.Controls.Add(this.gbPesquisar);
             this.Controls.Add(this.gbCadastrar);
             this.Controls.Add(this.label3);
@@ -415,8 +441,6 @@
             this.Text = "Contatos";
             this.Load += new System.EventHandler(this.FormTelefone_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormTelefone_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbCadastrar.ResumeLayout(false);
             this.gbCadastrar.PerformLayout();
             this.gbPesquisar.ResumeLayout(false);
@@ -424,6 +448,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,5 +488,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Site;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn idContato;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

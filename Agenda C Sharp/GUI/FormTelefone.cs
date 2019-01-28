@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace Agenda_C_Sharp.GUI {
     public partial class FormTelefone : Form {
+
+        private static TelefoneDao telefoneDao = new TelefoneDao();
+
         public FormTelefone() {
             InitializeComponent();
         }
@@ -34,7 +37,6 @@ namespace Agenda_C_Sharp.GUI {
             if (!string.IsNullOrEmpty(txtSite.Text) && !Funcoes.validarURL(txtSite, errorProvider1))
                 return;
             try {
-                TelefoneDao dao = new TelefoneDao();
                 Telefone telefone = new Telefone() {
                     email = txtEmail.Text.Trim(),
                     id_contato = Convert.ToInt32(cbxContato.SelectedValue),
@@ -42,7 +44,7 @@ namespace Agenda_C_Sharp.GUI {
                     telefone = txtTelefone.Text,
                     tipo = cbxTipo.Text
                 };
-                dao.Inserir(telefone);
+                telefoneDao.Inserir(telefone);
                 limpar();
                 MessageBox.Show("Telefone cadastrado com Sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
             } catch (Exception ex) {
@@ -64,9 +66,28 @@ namespace Agenda_C_Sharp.GUI {
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e) {
-            TelefoneDao dao = new TelefoneDao();
             int contato = Convert.ToInt32(cbxPesquisa.SelectedValue);
-            dgvContato.DataSource = dao.retornarPorContato(contato);
+            dgvContato.DataSource = telefoneDao.retornarPorContato(contato);
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e) {
+            if (dgvContato.RowCount > 0) {
+                if (MessageBox.Show("Deseja realmente excluir?", "Atenção", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes) {
+                    int codigo = Convert.ToInt32(dgvContato.CurrentRow.Cells[0].Value);
+                    Telefone telefone = telefoneDao.retornaPorId(codigo);
+
+                    try {
+                        telefoneDao.Excluir(telefone);
+                        MessageBox.Show("Excluido com Sucesso", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btnPesquisar_Click(sender, e);
+                    } catch (Exception ex) {
+                        MessageBox.Show("Erro ao excluir: " + ex.Message);
+                    }
+                }
+            } else {
+                MessageBox.Show("Nenhum telefone foi selecionado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
