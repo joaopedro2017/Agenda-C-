@@ -105,7 +105,7 @@
             this.dgvDados.RowHeadersVisible = false;
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDados.Size = new System.Drawing.Size(611, 138);
-            this.dgvDados.TabIndex = 0;
+            this.dgvDados.TabIndex = 14;
             // 
             // Codigo
             // 
@@ -208,7 +208,7 @@
             this.txtCep.Mask = "00.000-000";
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(68, 20);
-            this.txtCep.TabIndex = 14;
+            this.txtCep.TabIndex = 5;
             this.txtCep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // cbxEstado
@@ -244,42 +244,42 @@
             this.cbxEstado.Location = new System.Drawing.Point(65, 106);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(42, 21);
-            this.cbxEstado.TabIndex = 13;
+            this.cbxEstado.TabIndex = 6;
             // 
             // txtBairro
             // 
             this.txtBairro.Location = new System.Drawing.Point(396, 54);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(205, 20);
-            this.txtBairro.TabIndex = 11;
+            this.txtBairro.TabIndex = 3;
             // 
             // txtEndereco
             // 
             this.txtEndereco.Location = new System.Drawing.Point(396, 28);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(205, 20);
-            this.txtEndereco.TabIndex = 10;
+            this.txtEndereco.TabIndex = 1;
             // 
             // txtCidade
             // 
             this.txtCidade.Location = new System.Drawing.Point(65, 80);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(242, 20);
-            this.txtCidade.TabIndex = 9;
+            this.txtCidade.TabIndex = 4;
             // 
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(65, 54);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(242, 20);
-            this.txtNumero.TabIndex = 8;
+            this.txtNumero.TabIndex = 2;
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(65, 28);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(242, 20);
-            this.txtNome.TabIndex = 7;
+            this.txtNome.TabIndex = 0;
             // 
             // label7
             // 
@@ -352,7 +352,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(12, 345);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(94, 45);
-            this.btnCadastrar.TabIndex = 2;
+            this.btnCadastrar.TabIndex = 7;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrar.UseVisualStyleBackColor = true;
@@ -367,7 +367,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(112, 345);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(79, 45);
-            this.btnSalvar.TabIndex = 3;
+            this.btnSalvar.TabIndex = 8;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -382,7 +382,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(197, 345);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(79, 45);
-            this.btnAlterar.TabIndex = 4;
+            this.btnAlterar.TabIndex = 9;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -397,7 +397,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(282, 345);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(80, 45);
-            this.btnExcluir.TabIndex = 5;
+            this.btnExcluir.TabIndex = 10;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -411,7 +411,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(368, 345);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(92, 45);
-            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -425,7 +425,7 @@
             this.btnAtualizar.Location = new System.Drawing.Point(466, 345);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(89, 45);
-            this.btnAtualizar.TabIndex = 7;
+            this.btnAtualizar.TabIndex = 12;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAtualizar.UseVisualStyleBackColor = true;
@@ -439,7 +439,7 @@
             this.btnSair.Location = new System.Drawing.Point(561, 345);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(68, 45);
-            this.btnSair.TabIndex = 8;
+            this.btnSair.TabIndex = 13;
             this.btnSair.Text = "Sair";
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = true;

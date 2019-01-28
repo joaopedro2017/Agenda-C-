@@ -1,7 +1,7 @@
 ﻿using Agenda_C_Sharp.dao;
 using Agenda_C_Sharp.model;
+using Agenda_C_Sharp.Helper;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Agenda_C_Sharp.GUI {
@@ -23,8 +23,10 @@ namespace Agenda_C_Sharp.GUI {
         }
 
         private void btnSalvar_Click(object sender, System.EventArgs e) {
-            TelefoneDao dao = new TelefoneDao();
+            if (!string.IsNullOrEmpty(txtEmail.Text) && !Funcoes.validarEmail(txtEmail, errorProvider1))
+                return;
             try {
+                TelefoneDao dao = new TelefoneDao();
                 Telefone telefone = new Telefone() {
                     email = txtEmail.Text.Trim(),
                     id_contato = Convert.ToInt32(cbxContato.SelectedValue),
@@ -38,6 +40,7 @@ namespace Agenda_C_Sharp.GUI {
             } catch (Exception ex) {
                 MessageBox.Show("Erro ao cadastrar: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
         }
 
         private void limpar() {

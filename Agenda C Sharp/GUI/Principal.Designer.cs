@@ -30,6 +30,7 @@
             this.contatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.telefoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblData = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblHora = new System.Windows.Forms.ToolStripStatusLabel();
@@ -55,7 +56,8 @@
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.contatoToolStripMenuItem,
             this.telefoneToolStripMenuItem,
-            this.usuárioToolStripMenuItem});
+            this.usuárioToolStripMenuItem,
+            this.sairToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
@@ -65,7 +67,7 @@
             this.contatoToolStripMenuItem.Image = global::Agenda_C_Sharp.Properties.Resources.contacts_icon;
             this.contatoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.contatoToolStripMenuItem.Name = "contatoToolStripMenuItem";
-            this.contatoToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.contatoToolStripMenuItem.Size = new System.Drawing.Size(135, 38);
             this.contatoToolStripMenuItem.Text = "Contato";
             this.contatoToolStripMenuItem.Click += new System.EventHandler(this.contatoToolStripMenuItem_Click);
             // 
@@ -74,7 +76,7 @@
             this.telefoneToolStripMenuItem.Image = global::Agenda_C_Sharp.Properties.Resources.phone_icon;
             this.telefoneToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.telefoneToolStripMenuItem.Name = "telefoneToolStripMenuItem";
-            this.telefoneToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.telefoneToolStripMenuItem.Size = new System.Drawing.Size(135, 38);
             this.telefoneToolStripMenuItem.Text = "Telefone";
             this.telefoneToolStripMenuItem.Click += new System.EventHandler(this.telefoneToolStripMenuItem_Click);
             // 
@@ -83,9 +85,18 @@
             this.usuárioToolStripMenuItem.Image = global::Agenda_C_Sharp.Properties.Resources.Office_Customer_Male_Light_icon;
             this.usuárioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(135, 38);
             this.usuárioToolStripMenuItem.Text = "Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Image = global::Agenda_C_Sharp.Properties.Resources.Close_2_icon;
+            this.sairToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(135, 38);
+            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -171,6 +182,7 @@
         private System.Windows.Forms.ToolStripStatusLabel lblData;
         private System.Windows.Forms.ToolStripStatusLabel lblHora;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
     }
 }
 

@@ -40,6 +40,11 @@
             this.gbManutencao = new System.Windows.Forms.GroupBox();
             this.gbRegistros = new System.Windows.Forms.GroupBox();
             this.dgvDados = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
@@ -52,11 +57,6 @@
             this.rbSemOrdem = new System.Windows.Forms.RadioButton();
             this.rbLogin = new System.Windows.Forms.RadioButton();
             this.rbNome = new System.Windows.Forms.RadioButton();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbManutencao.SuspendLayout();
             this.gbRegistros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
@@ -71,7 +71,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(406, 20);
-            this.txtSenha.TabIndex = 1;
+            this.txtSenha.TabIndex = 2;
             // 
             // txtLogin
             // 
@@ -79,7 +79,7 @@
             this.txtLogin.MaxLength = 20;
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(406, 20);
-            this.txtLogin.TabIndex = 2;
+            this.txtLogin.TabIndex = 1;
             // 
             // txtNome
             // 
@@ -87,7 +87,7 @@
             this.txtNome.MaxLength = 100;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(406, 20);
-            this.txtNome.TabIndex = 3;
+            this.txtNome.TabIndex = 0;
             // 
             // label1
             // 
@@ -187,158 +187,6 @@
             this.dgvDados.Size = new System.Drawing.Size(617, 164);
             this.dgvDados.TabIndex = 0;
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Image = global::Agenda_C_Sharp.Properties.Resources.cancel_icon;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(369, 362);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(92, 45);
-            this.btnCancelar.TabIndex = 16;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Enabled = false;
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Image = global::Agenda_C_Sharp.Properties.Resources.delete_file_icon;
-            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluir.Location = new System.Drawing.Point(283, 362);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(80, 45);
-            this.btnExcluir.TabIndex = 15;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Enabled = false;
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.Image = global::Agenda_C_Sharp.Properties.Resources.Actions_document_edit_icon;
-            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterar.Location = new System.Drawing.Point(198, 362);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(79, 45);
-            this.btnAlterar.TabIndex = 14;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Image = global::Agenda_C_Sharp.Properties.Resources.Accept_icon;
-            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrar.Location = new System.Drawing.Point(12, 362);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(95, 45);
-            this.btnCadastrar.TabIndex = 13;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizar.Image = global::Agenda_C_Sharp.Properties.Resources.Refresh_icon;
-            this.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtualizar.Location = new System.Drawing.Point(467, 362);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(89, 45);
-            this.btnAtualizar.TabIndex = 12;
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
-            // 
-            // btnSair
-            // 
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Image = global::Agenda_C_Sharp.Properties.Resources.Close_2_icon;
-            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.Location = new System.Drawing.Point(562, 362);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(73, 45);
-            this.btnSair.TabIndex = 8;
-            this.btnSair.Text = "Sair";
-            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Enabled = false;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Image = global::Agenda_C_Sharp.Properties.Resources.Save_icon;
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(113, 362);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(79, 45);
-            this.btnSalvar.TabIndex = 4;
-            this.btnSalvar.Tag = "S";
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // gbOrdem
-            // 
-            this.gbOrdem.Controls.Add(this.rbSemOrdem);
-            this.gbOrdem.Controls.Add(this.rbLogin);
-            this.gbOrdem.Controls.Add(this.rbNome);
-            this.gbOrdem.Location = new System.Drawing.Point(518, 217);
-            this.gbOrdem.Name = "gbOrdem";
-            this.gbOrdem.Size = new System.Drawing.Size(114, 115);
-            this.gbOrdem.TabIndex = 17;
-            this.gbOrdem.TabStop = false;
-            this.gbOrdem.Text = "Ordenar por:";
-            // 
-            // rbSemOrdem
-            // 
-            this.rbSemOrdem.AutoSize = true;
-            this.rbSemOrdem.Checked = true;
-            this.rbSemOrdem.Location = new System.Drawing.Point(20, 78);
-            this.rbSemOrdem.Name = "rbSemOrdem";
-            this.rbSemOrdem.Size = new System.Drawing.Size(80, 17);
-            this.rbSemOrdem.TabIndex = 2;
-            this.rbSemOrdem.TabStop = true;
-            this.rbSemOrdem.Text = "Sem Ordem";
-            this.rbSemOrdem.UseVisualStyleBackColor = true;
-            // 
-            // rbLogin
-            // 
-            this.rbLogin.AutoSize = true;
-            this.rbLogin.Location = new System.Drawing.Point(20, 55);
-            this.rbLogin.Name = "rbLogin";
-            this.rbLogin.Size = new System.Drawing.Size(51, 17);
-            this.rbLogin.TabIndex = 1;
-            this.rbLogin.Text = "Login";
-            this.rbLogin.UseVisualStyleBackColor = true;
-            // 
-            // rbNome
-            // 
-            this.rbNome.AutoSize = true;
-            this.rbNome.Location = new System.Drawing.Point(20, 32);
-            this.rbNome.Name = "rbNome";
-            this.rbNome.Size = new System.Drawing.Size(53, 17);
-            this.rbNome.TabIndex = 0;
-            this.rbNome.Text = "Nome";
-            this.rbNome.UseVisualStyleBackColor = true;
-            // 
             // Codigo
             // 
             this.Codigo.DataPropertyName = "id";
@@ -383,6 +231,162 @@
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
             this.Status.Visible = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Image = global::Agenda_C_Sharp.Properties.Resources.cancel_icon;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(369, 362);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(92, 45);
+            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.Tag = "r";
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Enabled = false;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Image = global::Agenda_C_Sharp.Properties.Resources.delete_file_icon;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluir.Location = new System.Drawing.Point(283, 362);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(80, 45);
+            this.btnExcluir.TabIndex = 9;
+            this.btnExcluir.Tag = "x";
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Enabled = false;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.Image = global::Agenda_C_Sharp.Properties.Resources.Actions_document_edit_icon;
+            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterar.Location = new System.Drawing.Point(198, 362);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(79, 45);
+            this.btnAlterar.TabIndex = 8;
+            this.btnAlterar.Tag = "a";
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Image = global::Agenda_C_Sharp.Properties.Resources.Accept_icon;
+            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrar.Location = new System.Drawing.Point(12, 362);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(95, 45);
+            this.btnCadastrar.TabIndex = 6;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizar.Image = global::Agenda_C_Sharp.Properties.Resources.Refresh_icon;
+            this.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtualizar.Location = new System.Drawing.Point(467, 362);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(89, 45);
+            this.btnAtualizar.TabIndex = 11;
+            this.btnAtualizar.Tag = "t";
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Image = global::Agenda_C_Sharp.Properties.Resources.Close_2_icon;
+            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSair.Location = new System.Drawing.Point(562, 362);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(73, 45);
+            this.btnSair.TabIndex = 12;
+            this.btnSair.Text = "Sair";
+            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Enabled = false;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Image = global::Agenda_C_Sharp.Properties.Resources.Save_icon;
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.Location = new System.Drawing.Point(113, 362);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(79, 45);
+            this.btnSalvar.TabIndex = 7;
+            this.btnSalvar.Tag = "S";
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // gbOrdem
+            // 
+            this.gbOrdem.Controls.Add(this.rbSemOrdem);
+            this.gbOrdem.Controls.Add(this.rbLogin);
+            this.gbOrdem.Controls.Add(this.rbNome);
+            this.gbOrdem.Location = new System.Drawing.Point(518, 217);
+            this.gbOrdem.Name = "gbOrdem";
+            this.gbOrdem.Size = new System.Drawing.Size(114, 115);
+            this.gbOrdem.TabIndex = 17;
+            this.gbOrdem.TabStop = false;
+            this.gbOrdem.Text = "Ordenar por:";
+            // 
+            // rbSemOrdem
+            // 
+            this.rbSemOrdem.AutoSize = true;
+            this.rbSemOrdem.Checked = true;
+            this.rbSemOrdem.Location = new System.Drawing.Point(20, 78);
+            this.rbSemOrdem.Name = "rbSemOrdem";
+            this.rbSemOrdem.Size = new System.Drawing.Size(80, 17);
+            this.rbSemOrdem.TabIndex = 5;
+            this.rbSemOrdem.TabStop = true;
+            this.rbSemOrdem.Text = "Sem Ordem";
+            this.rbSemOrdem.UseVisualStyleBackColor = true;
+            // 
+            // rbLogin
+            // 
+            this.rbLogin.AutoSize = true;
+            this.rbLogin.Location = new System.Drawing.Point(20, 55);
+            this.rbLogin.Name = "rbLogin";
+            this.rbLogin.Size = new System.Drawing.Size(51, 17);
+            this.rbLogin.TabIndex = 4;
+            this.rbLogin.Text = "Login";
+            this.rbLogin.UseVisualStyleBackColor = true;
+            // 
+            // rbNome
+            // 
+            this.rbNome.AutoSize = true;
+            this.rbNome.Location = new System.Drawing.Point(20, 32);
+            this.rbNome.Name = "rbNome";
+            this.rbNome.Size = new System.Drawing.Size(53, 17);
+            this.rbNome.TabIndex = 3;
+            this.rbNome.Text = "Nome";
+            this.rbNome.UseVisualStyleBackColor = true;
             // 
             // FormUsuario
             // 

@@ -29,5 +29,11 @@ namespace Agenda_C_Sharp.GUI {
             FormTelefone form = new FormTelefone();
             form.ShowDialog();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (MessageBox.Show("Deseja sair?", "Fechamento!", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                == DialogResult.Yes)
+                Close();
+        }
     }
 }
