@@ -25,6 +25,8 @@ namespace Agenda_C_Sharp.GUI {
         private void btnSalvar_Click(object sender, System.EventArgs e) {
             if (!string.IsNullOrEmpty(txtEmail.Text) && !Funcoes.validarEmail(txtEmail, errorProvider1))
                 return;
+            if (!string.IsNullOrEmpty(txtSite.Text) && !Funcoes.validarURL(txtSite, errorProvider1))
+                return;
             try {
                 TelefoneDao dao = new TelefoneDao();
                 Telefone telefone = new Telefone() {
