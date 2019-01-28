@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelefone));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,17 +45,23 @@
             this.cbxContato = new System.Windows.Forms.ComboBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.gbPesquisar = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvContato = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbxPesquisa = new System.Windows.Forms.ComboBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Tefefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Site = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idContato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbCadastrar.SuspendLayout();
             this.gbPesquisar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContato)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -136,7 +143,7 @@
             this.gbCadastrar.Controls.Add(this.btnSalvar);
             this.gbCadastrar.Location = new System.Drawing.Point(12, 98);
             this.gbCadastrar.Name = "gbCadastrar";
-            this.gbCadastrar.Size = new System.Drawing.Size(391, 234);
+            this.gbCadastrar.Size = new System.Drawing.Size(391, 208);
             this.gbCadastrar.TabIndex = 6;
             this.gbCadastrar.TabStop = false;
             this.gbCadastrar.Text = "Cadastro:";
@@ -234,13 +241,14 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.White;
-            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSalvar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
             this.btnSalvar.Location = new System.Drawing.Point(280, 170);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(90, 49);
+            this.btnSalvar.Size = new System.Drawing.Size(90, 28);
             this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "Cadastrar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -248,27 +256,41 @@
             // 
             // gbPesquisar
             // 
-            this.gbPesquisar.Controls.Add(this.dataGridView1);
+            this.gbPesquisar.Controls.Add(this.dgvContato);
             this.gbPesquisar.Controls.Add(this.panel1);
             this.gbPesquisar.Location = new System.Drawing.Point(415, 98);
             this.gbPesquisar.Name = "gbPesquisar";
-            this.gbPesquisar.Size = new System.Drawing.Size(436, 234);
+            this.gbPesquisar.Size = new System.Drawing.Size(436, 208);
             this.gbPesquisar.TabIndex = 7;
             this.gbPesquisar.TabStop = false;
             this.gbPesquisar.Text = "Pesquisar:";
             // 
-            // dataGridView1
+            // dgvContato
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 56);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(430, 175);
-            this.dataGridView1.TabIndex = 8;
+            this.dgvContato.AllowUserToAddRows = false;
+            this.dgvContato.AllowUserToDeleteRows = false;
+            this.dgvContato.AllowUserToResizeColumns = false;
+            this.dgvContato.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MintCream;
+            this.dgvContato.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvContato.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvContato.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvContato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContato.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Tefefone,
+            this.Tipo,
+            this.Email,
+            this.Site,
+            this.id,
+            this.idContato});
+            this.dgvContato.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvContato.Location = new System.Drawing.Point(3, 56);
+            this.dgvContato.Name = "dgvContato";
+            this.dgvContato.ReadOnly = true;
+            this.dgvContato.RowHeadersVisible = false;
+            this.dgvContato.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvContato.Size = new System.Drawing.Size(430, 149);
+            this.dgvContato.TabIndex = 8;
             // 
             // panel1
             // 
@@ -287,29 +309,31 @@
             this.cbxPesquisa.DisplayMember = "nome";
             this.cbxPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxPesquisa.FormattingEnabled = true;
-            this.cbxPesquisa.Location = new System.Drawing.Point(83, 11);
+            this.cbxPesquisa.Location = new System.Drawing.Point(61, 11);
             this.cbxPesquisa.Name = "cbxPesquisa";
-            this.cbxPesquisa.Size = new System.Drawing.Size(232, 21);
+            this.cbxPesquisa.Size = new System.Drawing.Size(264, 21);
             this.cbxPesquisa.TabIndex = 6;
             this.cbxPesquisa.ValueMember = "id";
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.BackColor = System.Drawing.Color.White;
-            this.btnPesquisar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnPesquisar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnPesquisar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.ForeColor = System.Drawing.Color.White;
             this.btnPesquisar.Location = new System.Drawing.Point(331, 6);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(90, 28);
             this.btnPesquisar.TabIndex = 7;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(30, 14);
+            this.label10.Location = new System.Drawing.Point(15, 14);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 13);
             this.label10.TabIndex = 4;
@@ -320,12 +344,60 @@
             this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
             // 
+            // Tefefone
+            // 
+            this.Tefefone.DataPropertyName = "telefone";
+            this.Tefefone.HeaderText = "Telefone";
+            this.Tefefone.Name = "Tefefone";
+            this.Tefefone.ReadOnly = true;
+            this.Tefefone.Width = 95;
+            // 
+            // Tipo
+            // 
+            this.Tipo.DataPropertyName = "tipo";
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.Name = "Tipo";
+            this.Tipo.ReadOnly = true;
+            this.Tipo.Width = 85;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "email";
+            this.Email.HeaderText = "E-mail";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 115;
+            // 
+            // Site
+            // 
+            this.Site.DataPropertyName = "site";
+            this.Site.HeaderText = "Site";
+            this.Site.Name = "Site";
+            this.Site.ReadOnly = true;
+            this.Site.Width = 115;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // idContato
+            // 
+            this.idContato.DataPropertyName = "id_contato";
+            this.idContato.HeaderText = "idContato";
+            this.idContato.Name = "idContato";
+            this.idContato.ReadOnly = true;
+            this.idContato.Visible = false;
+            // 
             // FormTelefone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(862, 343);
+            this.ClientSize = new System.Drawing.Size(862, 321);
             this.Controls.Add(this.gbPesquisar);
             this.Controls.Add(this.gbCadastrar);
             this.Controls.Add(this.label3);
@@ -348,7 +420,7 @@
             this.gbCadastrar.ResumeLayout(false);
             this.gbCadastrar.PerformLayout();
             this.gbPesquisar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContato)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -378,11 +450,17 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbxTipo;
         private System.Windows.Forms.GroupBox gbPesquisar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvContato;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbxPesquisa;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tefefone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Site;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idContato;
     }
 }

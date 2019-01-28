@@ -62,5 +62,11 @@ namespace Agenda_C_Sharp.GUI {
             cbxTipo.SelectedIndex = 0;
             cbxContato.Focus();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e) {
+            TelefoneDao dao = new TelefoneDao();
+            int contato = Convert.ToInt32(cbxPesquisa.SelectedValue);
+            dgvContato.DataSource = dao.retornarPorContato(contato);
+        }
     }
 }
