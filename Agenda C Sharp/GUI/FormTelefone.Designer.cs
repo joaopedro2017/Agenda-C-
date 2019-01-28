@@ -158,7 +158,7 @@
             this.cbxTipo.Location = new System.Drawing.Point(73, 54);
             this.cbxTipo.Name = "cbxTipo";
             this.cbxTipo.Size = new System.Drawing.Size(297, 21);
-            this.cbxTipo.TabIndex = 10;
+            this.cbxTipo.TabIndex = 1;
             // 
             // label8
             // 
@@ -174,7 +174,7 @@
             this.txtSite.Location = new System.Drawing.Point(73, 133);
             this.txtSite.Name = "txtSite";
             this.txtSite.Size = new System.Drawing.Size(297, 20);
-            this.txtSite.TabIndex = 7;
+            this.txtSite.TabIndex = 4;
             // 
             // label7
             // 
@@ -191,7 +191,7 @@
             this.txtTelefone.Mask = "(99)0000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(297, 20);
-            this.txtTelefone.TabIndex = 5;
+            this.txtTelefone.TabIndex = 2;
             // 
             // label6
             // 
@@ -226,7 +226,7 @@
             this.cbxContato.Location = new System.Drawing.Point(73, 27);
             this.cbxContato.Name = "cbxContato";
             this.cbxContato.Size = new System.Drawing.Size(297, 21);
-            this.cbxContato.TabIndex = 1;
+            this.cbxContato.TabIndex = 0;
             this.cbxContato.ValueMember = "id";
             // 
             // btnSalvar
@@ -238,7 +238,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(280, 170);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(90, 49);
-            this.btnSalvar.TabIndex = 0;
+            this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "Cadastrar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -265,7 +265,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(430, 175);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.TabIndex = 8;
             // 
             // panel1
             // 
@@ -299,7 +299,7 @@
             this.btnPesquisar.Location = new System.Drawing.Point(331, 6);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(90, 28);
-            this.btnPesquisar.TabIndex = 5;
+            this.btnPesquisar.TabIndex = 7;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
             // 
