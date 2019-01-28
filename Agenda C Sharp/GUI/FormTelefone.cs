@@ -23,6 +23,12 @@ namespace Agenda_C_Sharp.GUI {
         }
 
         private void btnSalvar_Click(object sender, System.EventArgs e) {
+            errorProvider1.SetError(txtTelefone, "");
+            if (txtTelefone.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace("_", "").Trim().Length < 10) {
+                errorProvider1.SetError(txtTelefone, "Telefone inválido!");
+                return;
+            }
+
             if (!string.IsNullOrEmpty(txtEmail.Text) && !Funcoes.validarEmail(txtEmail, errorProvider1))
                 return;
             if (!string.IsNullOrEmpty(txtSite.Text) && !Funcoes.validarURL(txtSite, errorProvider1))
