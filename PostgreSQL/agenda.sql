@@ -30,7 +30,8 @@ CREATE TABLE CONTATO(
 CREATE TABLE TELEFONE(
 	id serial NOT NULL,
     id_contato integer NOT NULL,
-    telefone integer,
+    tipo character varying(20),
+    telefone character varying(13),
     email character varying(255),
     site character varying(255),
 	
@@ -48,3 +49,5 @@ CREATE TABLE USUARIO(
 	
 	CONSTRAINT PK_USUARIO PRIMARY KEY(id)
 );
+--- EX:
+INSERT INTO TELEFONE VALUES(3, 1, 'Comercial', '(32)9999-1234', 'joao@gmail.com', 'joao.com.br');

@@ -7,7 +7,8 @@ namespace Agenda_C_Sharp.Mapeamento {
         public TelefoneMap() {
             Id(c => c.id);
             Map(c => c.email);
-            Map(c => c.id_Contatos);
+            Map(c => c.id_contato);
+            Map(c => c.tipo);
             Map(c => c.site);
             Map(c => c.telefone);
             Table("telefone");

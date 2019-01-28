@@ -31,29 +31,29 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbCadastrar = new System.Windows.Forms.GroupBox();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.cbxContato = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtSite = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbxTipo = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.cbxTipo = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtSite = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbxContato = new System.Windows.Forms.ComboBox();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.gbPesquisar = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.cbxPesquisa = new System.Windows.Forms.ComboBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbCadastrar.SuspendLayout();
             this.gbPesquisar.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -138,87 +138,14 @@
             this.gbCadastrar.TabStop = false;
             this.gbCadastrar.Text = "Cadastro:";
             // 
-            // btnSalvar
+            // label9
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.White;
-            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(280, 170);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(90, 49);
-            this.btnSalvar.TabIndex = 0;
-            this.btnSalvar.Text = "Cadastrar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            // 
-            // cbxContato
-            // 
-            this.cbxContato.DisplayMember = "nome";
-            this.cbxContato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxContato.FormattingEnabled = true;
-            this.cbxContato.Location = new System.Drawing.Point(73, 27);
-            this.cbxContato.Name = "cbxContato";
-            this.cbxContato.Size = new System.Drawing.Size(297, 21);
-            this.cbxContato.TabIndex = 1;
-            this.cbxContato.ValueMember = "id";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 30);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Contato:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(73, 107);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(297, 20);
-            this.txtEmail.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 84);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Telefone:";
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(73, 81);
-            this.txtTelefone.Mask = "(99) 0000-0000";
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(297, 20);
-            this.txtTelefone.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(39, 136);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Site:";
-            // 
-            // txtSite
-            // 
-            this.txtSite.Location = new System.Drawing.Point(73, 133);
-            this.txtSite.Name = "txtSite";
-            this.txtSite.Size = new System.Drawing.Size(297, 20);
-            this.txtSite.TabIndex = 7;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(29, 113);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "E-mail:";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(29, 57);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Tipo:";
             // 
             // cbxTipo
             // 
@@ -233,14 +160,88 @@
             this.cbxTipo.Size = new System.Drawing.Size(297, 21);
             this.cbxTipo.TabIndex = 10;
             // 
-            // label9
+            // label8
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(29, 57);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 13);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Tipo:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(29, 113);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(38, 13);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "E-mail:";
+            // 
+            // txtSite
+            // 
+            this.txtSite.Location = new System.Drawing.Point(73, 133);
+            this.txtSite.Name = "txtSite";
+            this.txtSite.Size = new System.Drawing.Size(297, 20);
+            this.txtSite.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(39, 136);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(28, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Site:";
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(73, 81);
+            this.txtTelefone.Mask = "(99)0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(297, 20);
+            this.txtTelefone.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 84);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Telefone:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(73, 107);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(297, 20);
+            this.txtEmail.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Contato:";
+            // 
+            // cbxContato
+            // 
+            this.cbxContato.DisplayMember = "nome";
+            this.cbxContato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxContato.FormattingEnabled = true;
+            this.cbxContato.Location = new System.Drawing.Point(73, 27);
+            this.cbxContato.Name = "cbxContato";
+            this.cbxContato.Size = new System.Drawing.Size(297, 21);
+            this.cbxContato.TabIndex = 1;
+            this.cbxContato.ValueMember = "id";
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.White;
+            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Location = new System.Drawing.Point(280, 170);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(90, 49);
+            this.btnSalvar.TabIndex = 0;
+            this.btnSalvar.Text = "Cadastrar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // gbPesquisar
             // 
@@ -252,18 +253,6 @@
             this.gbPesquisar.TabIndex = 7;
             this.gbPesquisar.TabStop = false;
             this.gbPesquisar.Text = "Pesquisar:";
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.cbxPesquisa);
-            this.panel1.Controls.Add(this.btnPesquisar);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 16);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 40);
-            this.panel1.TabIndex = 0;
             // 
             // dataGridView1
             // 
@@ -278,14 +267,28 @@
             this.dataGridView1.Size = new System.Drawing.Size(430, 175);
             this.dataGridView1.TabIndex = 1;
             // 
-            // label10
+            // panel1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(30, 14);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 13);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Contato:";
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbxPesquisa);
+            this.panel1.Controls.Add(this.btnPesquisar);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 16);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(430, 40);
+            this.panel1.TabIndex = 0;
+            // 
+            // cbxPesquisa
+            // 
+            this.cbxPesquisa.DisplayMember = "nome";
+            this.cbxPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPesquisa.FormattingEnabled = true;
+            this.cbxPesquisa.Location = new System.Drawing.Point(83, 11);
+            this.cbxPesquisa.Name = "cbxPesquisa";
+            this.cbxPesquisa.Size = new System.Drawing.Size(232, 21);
+            this.cbxPesquisa.TabIndex = 6;
+            this.cbxPesquisa.ValueMember = "id";
             // 
             // btnPesquisar
             // 
@@ -300,16 +303,14 @@
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
             // 
-            // cbxPesquisa
+            // label10
             // 
-            this.cbxPesquisa.DisplayMember = "nome";
-            this.cbxPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxPesquisa.FormattingEnabled = true;
-            this.cbxPesquisa.Location = new System.Drawing.Point(83, 11);
-            this.cbxPesquisa.Name = "cbxPesquisa";
-            this.cbxPesquisa.Size = new System.Drawing.Size(232, 21);
-            this.cbxPesquisa.TabIndex = 6;
-            this.cbxPesquisa.ValueMember = "id";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(30, 14);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 13);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Contato:";
             // 
             // FormTelefone
             // 
@@ -339,9 +340,9 @@
             this.gbCadastrar.ResumeLayout(false);
             this.gbCadastrar.PerformLayout();
             this.gbPesquisar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
