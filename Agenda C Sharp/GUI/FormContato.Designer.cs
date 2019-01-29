@@ -24,8 +24,8 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormContato));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbRegistros = new System.Windows.Forms.GroupBox();
             this.dgvDados = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,16 +68,17 @@
             // 
             // gbRegistros
             // 
+            resources.ApplyResources(this.gbRegistros, "gbRegistros");
             this.gbRegistros.Controls.Add(this.dgvDados);
-            this.gbRegistros.Location = new System.Drawing.Point(12, 12);
+            this.errorProvider1.SetError(this.gbRegistros, resources.GetString("gbRegistros.Error"));
+            this.errorProvider1.SetIconAlignment(this.gbRegistros, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("gbRegistros.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.gbRegistros, ((int)(resources.GetObject("gbRegistros.IconPadding"))));
             this.gbRegistros.Name = "gbRegistros";
-            this.gbRegistros.Size = new System.Drawing.Size(617, 157);
-            this.gbRegistros.TabIndex = 0;
             this.gbRegistros.TabStop = false;
-            this.gbRegistros.Text = "Registros";
             // 
             // dgvDados
             // 
+            resources.ApplyResources(this.dgvDados, "dgvDados");
             this.dgvDados.AllowUserToAddRows = false;
             this.dgvDados.AllowUserToDeleteRows = false;
             this.dgvDados.AllowUserToResizeColumns = false;
@@ -98,88 +99,80 @@
             this.Cidade,
             this.Estado,
             this.Status});
-            this.dgvDados.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDados.Location = new System.Drawing.Point(3, 16);
+            this.errorProvider1.SetError(this.dgvDados, resources.GetString("dgvDados.Error"));
+            this.errorProvider1.SetIconAlignment(this.dgvDados, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("dgvDados.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.dgvDados, ((int)(resources.GetObject("dgvDados.IconPadding"))));
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.ReadOnly = true;
             this.dgvDados.RowHeadersVisible = false;
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDados.Size = new System.Drawing.Size(611, 138);
-            this.dgvDados.TabIndex = 14;
             // 
             // Codigo
             // 
             this.Codigo.DataPropertyName = "id";
-            this.Codigo.HeaderText = "Código";
+            resources.ApplyResources(this.Codigo, "Codigo");
             this.Codigo.Name = "Codigo";
             this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 48;
             // 
             // Nome
             // 
             this.Nome.DataPropertyName = "nome";
-            this.Nome.HeaderText = "Nome";
+            resources.ApplyResources(this.Nome, "Nome");
             this.Nome.Name = "Nome";
             this.Nome.ReadOnly = true;
-            this.Nome.Width = 95;
             // 
             // Endereco
             // 
             this.Endereco.DataPropertyName = "endereco";
-            this.Endereco.HeaderText = "Endereço";
+            resources.ApplyResources(this.Endereco, "Endereco");
             this.Endereco.Name = "Endereco";
             this.Endereco.ReadOnly = true;
-            this.Endereco.Width = 95;
             // 
             // Bairro
             // 
             this.Bairro.DataPropertyName = "bairro";
-            this.Bairro.HeaderText = "Bairro";
+            resources.ApplyResources(this.Bairro, "Bairro");
             this.Bairro.Name = "Bairro";
             this.Bairro.ReadOnly = true;
-            this.Bairro.Width = 80;
             // 
             // Numero
             // 
             this.Numero.DataPropertyName = "numero";
-            this.Numero.HeaderText = "Número";
+            resources.ApplyResources(this.Numero, "Numero");
             this.Numero.Name = "Numero";
             this.Numero.ReadOnly = true;
-            this.Numero.Width = 50;
             // 
             // Cep
             // 
             this.Cep.DataPropertyName = "cep";
-            this.Cep.HeaderText = "CEP";
+            resources.ApplyResources(this.Cep, "Cep");
             this.Cep.Name = "Cep";
             this.Cep.ReadOnly = true;
-            this.Cep.Width = 75;
             // 
             // Cidade
             // 
             this.Cidade.DataPropertyName = "cidade";
-            this.Cidade.HeaderText = "Cidade";
+            resources.ApplyResources(this.Cidade, "Cidade");
             this.Cidade.Name = "Cidade";
             this.Cidade.ReadOnly = true;
             // 
             // Estado
             // 
             this.Estado.DataPropertyName = "estado";
-            this.Estado.HeaderText = "Estado";
+            resources.ApplyResources(this.Estado, "Estado");
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
-            this.Estado.Width = 45;
             // 
             // Status
             // 
             this.Status.DataPropertyName = "status";
-            this.Status.HeaderText = "Status";
+            resources.ApplyResources(this.Status, "Status");
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
-            this.Status.Visible = false;
             // 
             // gbManutencao
             // 
+            resources.ApplyResources(this.gbManutencao, "gbManutencao");
             this.gbManutencao.Controls.Add(this.txtCep);
             this.gbManutencao.Controls.Add(this.cbxEstado);
             this.gbManutencao.Controls.Add(this.txtBairro);
@@ -194,266 +187,240 @@
             this.gbManutencao.Controls.Add(this.label3);
             this.gbManutencao.Controls.Add(this.label2);
             this.gbManutencao.Controls.Add(this.label1);
-            this.gbManutencao.Enabled = false;
-            this.gbManutencao.Location = new System.Drawing.Point(12, 175);
+            this.errorProvider1.SetError(this.gbManutencao, resources.GetString("gbManutencao.Error"));
+            this.errorProvider1.SetIconAlignment(this.gbManutencao, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("gbManutencao.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.gbManutencao, ((int)(resources.GetObject("gbManutencao.IconPadding"))));
             this.gbManutencao.Name = "gbManutencao";
-            this.gbManutencao.Size = new System.Drawing.Size(617, 164);
-            this.gbManutencao.TabIndex = 1;
             this.gbManutencao.TabStop = false;
-            this.gbManutencao.Text = "Manutenção";
             // 
             // txtCep
             // 
-            this.txtCep.Location = new System.Drawing.Point(396, 80);
-            this.txtCep.Mask = "00.000-000";
+            resources.ApplyResources(this.txtCep, "txtCep");
+            this.errorProvider1.SetError(this.txtCep, resources.GetString("txtCep.Error"));
+            this.errorProvider1.SetIconAlignment(this.txtCep, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtCep.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.txtCep, ((int)(resources.GetObject("txtCep.IconPadding"))));
             this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(68, 20);
-            this.txtCep.TabIndex = 5;
             this.txtCep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // cbxEstado
             // 
+            resources.ApplyResources(this.cbxEstado, "cbxEstado");
             this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.errorProvider1.SetError(this.cbxEstado, resources.GetString("cbxEstado.Error"));
             this.cbxEstado.FormattingEnabled = true;
+            this.errorProvider1.SetIconAlignment(this.cbxEstado, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("cbxEstado.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.cbxEstado, ((int)(resources.GetObject("cbxEstado.IconPadding"))));
             this.cbxEstado.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MS",
-            "MG",
-            "PA",
-            "PR",
-            "PE",
-            "PI",
-            "RR",
-            "RO",
-            "RJ",
-            "RN",
-            "RS",
-            "SC",
-            "SP",
-            "SE",
-            "TO"});
-            this.cbxEstado.Location = new System.Drawing.Point(65, 106);
+            resources.GetString("cbxEstado.Items"),
+            resources.GetString("cbxEstado.Items1"),
+            resources.GetString("cbxEstado.Items2"),
+            resources.GetString("cbxEstado.Items3"),
+            resources.GetString("cbxEstado.Items4"),
+            resources.GetString("cbxEstado.Items5"),
+            resources.GetString("cbxEstado.Items6"),
+            resources.GetString("cbxEstado.Items7"),
+            resources.GetString("cbxEstado.Items8"),
+            resources.GetString("cbxEstado.Items9"),
+            resources.GetString("cbxEstado.Items10"),
+            resources.GetString("cbxEstado.Items11"),
+            resources.GetString("cbxEstado.Items12"),
+            resources.GetString("cbxEstado.Items13"),
+            resources.GetString("cbxEstado.Items14"),
+            resources.GetString("cbxEstado.Items15"),
+            resources.GetString("cbxEstado.Items16"),
+            resources.GetString("cbxEstado.Items17"),
+            resources.GetString("cbxEstado.Items18"),
+            resources.GetString("cbxEstado.Items19"),
+            resources.GetString("cbxEstado.Items20"),
+            resources.GetString("cbxEstado.Items21"),
+            resources.GetString("cbxEstado.Items22"),
+            resources.GetString("cbxEstado.Items23"),
+            resources.GetString("cbxEstado.Items24")});
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(42, 21);
-            this.cbxEstado.TabIndex = 6;
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(396, 54);
+            resources.ApplyResources(this.txtBairro, "txtBairro");
+            this.errorProvider1.SetError(this.txtBairro, resources.GetString("txtBairro.Error"));
+            this.errorProvider1.SetIconAlignment(this.txtBairro, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtBairro.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.txtBairro, ((int)(resources.GetObject("txtBairro.IconPadding"))));
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(205, 20);
-            this.txtBairro.TabIndex = 3;
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(396, 28);
+            resources.ApplyResources(this.txtEndereco, "txtEndereco");
+            this.errorProvider1.SetError(this.txtEndereco, resources.GetString("txtEndereco.Error"));
+            this.errorProvider1.SetIconAlignment(this.txtEndereco, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtEndereco.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.txtEndereco, ((int)(resources.GetObject("txtEndereco.IconPadding"))));
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(205, 20);
-            this.txtEndereco.TabIndex = 1;
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(65, 80);
+            resources.ApplyResources(this.txtCidade, "txtCidade");
+            this.errorProvider1.SetError(this.txtCidade, resources.GetString("txtCidade.Error"));
+            this.errorProvider1.SetIconAlignment(this.txtCidade, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtCidade.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.txtCidade, ((int)(resources.GetObject("txtCidade.IconPadding"))));
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(242, 20);
-            this.txtCidade.TabIndex = 4;
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(65, 54);
+            resources.ApplyResources(this.txtNumero, "txtNumero");
+            this.errorProvider1.SetError(this.txtNumero, resources.GetString("txtNumero.Error"));
+            this.errorProvider1.SetIconAlignment(this.txtNumero, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtNumero.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.txtNumero, ((int)(resources.GetObject("txtNumero.IconPadding"))));
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(242, 20);
-            this.txtNumero.TabIndex = 2;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(65, 28);
+            resources.ApplyResources(this.txtNome, "txtNome");
+            this.errorProvider1.SetError(this.txtNome, resources.GetString("txtNome.Error"));
+            this.errorProvider1.SetIconAlignment(this.txtNome, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtNome.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.txtNome, ((int)(resources.GetObject("txtNome.IconPadding"))));
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(242, 20);
-            this.txtNome.TabIndex = 0;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(359, 87);
+            resources.ApplyResources(this.label7, "label7");
+            this.errorProvider1.SetError(this.label7, resources.GetString("label7.Error"));
+            this.errorProvider1.SetIconAlignment(this.label7, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label7.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label7, ((int)(resources.GetObject("label7.IconPadding"))));
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "CEP:";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(353, 61);
+            resources.ApplyResources(this.label6, "label6");
+            this.errorProvider1.SetError(this.label6, resources.GetString("label6.Error"));
+            this.errorProvider1.SetIconAlignment(this.label6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label6.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label6, ((int)(resources.GetObject("label6.IconPadding"))));
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Bairro:";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(334, 35);
+            resources.ApplyResources(this.label5, "label5");
+            this.errorProvider1.SetError(this.label5, resources.GetString("label5.Error"));
+            this.errorProvider1.SetIconAlignment(this.label5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label5.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label5, ((int)(resources.GetObject("label5.IconPadding"))));
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Endereço:";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 114);
+            resources.ApplyResources(this.label4, "label4");
+            this.errorProvider1.SetError(this.label4, resources.GetString("label4.Error"));
+            this.errorProvider1.SetIconAlignment(this.label4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label4.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label4, ((int)(resources.GetObject("label4.IconPadding"))));
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Estado:";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 87);
+            resources.ApplyResources(this.label3, "label3");
+            this.errorProvider1.SetError(this.label3, resources.GetString("label3.Error"));
+            this.errorProvider1.SetIconAlignment(this.label3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label3.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label3, ((int)(resources.GetObject("label3.IconPadding"))));
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Cidade:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 61);
+            resources.ApplyResources(this.label2, "label2");
+            this.errorProvider1.SetError(this.label2, resources.GetString("label2.Error"));
+            this.errorProvider1.SetIconAlignment(this.label2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label2.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label2, ((int)(resources.GetObject("label2.IconPadding"))));
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Número:";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 35);
+            resources.ApplyResources(this.label1, "label1");
+            this.errorProvider1.SetError(this.label1, resources.GetString("label1.Error"));
+            this.errorProvider1.SetIconAlignment(this.label1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label1, ((int)(resources.GetObject("label1.IconPadding"))));
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome:";
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.btnCadastrar, "btnCadastrar");
+            this.errorProvider1.SetError(this.btnCadastrar, resources.GetString("btnCadastrar.Error"));
+            this.errorProvider1.SetIconAlignment(this.btnCadastrar, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("btnCadastrar.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.btnCadastrar, ((int)(resources.GetObject("btnCadastrar.IconPadding"))));
             this.btnCadastrar.Image = global::Agenda_C_Sharp.Properties.Resources.Accept_icon;
-            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrar.Location = new System.Drawing.Point(12, 345);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(94, 45);
-            this.btnCadastrar.TabIndex = 7;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Enabled = false;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.btnSalvar, "btnSalvar");
+            this.errorProvider1.SetError(this.btnSalvar, resources.GetString("btnSalvar.Error"));
+            this.errorProvider1.SetIconAlignment(this.btnSalvar, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("btnSalvar.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.btnSalvar, ((int)(resources.GetObject("btnSalvar.IconPadding"))));
             this.btnSalvar.Image = global::Agenda_C_Sharp.Properties.Resources.Save_icon;
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(112, 345);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(79, 45);
-            this.btnSalvar.TabIndex = 8;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Enabled = false;
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.btnAlterar, "btnAlterar");
+            this.errorProvider1.SetError(this.btnAlterar, resources.GetString("btnAlterar.Error"));
+            this.errorProvider1.SetIconAlignment(this.btnAlterar, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("btnAlterar.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.btnAlterar, ((int)(resources.GetObject("btnAlterar.IconPadding"))));
             this.btnAlterar.Image = global::Agenda_C_Sharp.Properties.Resources.Actions_document_edit_icon;
-            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterar.Location = new System.Drawing.Point(197, 345);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(79, 45);
-            this.btnAlterar.TabIndex = 9;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Enabled = false;
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.btnExcluir, "btnExcluir");
+            this.errorProvider1.SetError(this.btnExcluir, resources.GetString("btnExcluir.Error"));
+            this.errorProvider1.SetIconAlignment(this.btnExcluir, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("btnExcluir.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.btnExcluir, ((int)(resources.GetObject("btnExcluir.IconPadding"))));
             this.btnExcluir.Image = global::Agenda_C_Sharp.Properties.Resources.delete_file_icon;
-            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluir.Location = new System.Drawing.Point(282, 345);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(80, 45);
-            this.btnExcluir.TabIndex = 10;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.btnCancelar, "btnCancelar");
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.errorProvider1.SetError(this.btnCancelar, resources.GetString("btnCancelar.Error"));
+            this.errorProvider1.SetIconAlignment(this.btnCancelar, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("btnCancelar.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.btnCancelar, ((int)(resources.GetObject("btnCancelar.IconPadding"))));
             this.btnCancelar.Image = global::Agenda_C_Sharp.Properties.Resources.cancel_icon;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(368, 345);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(92, 45);
-            this.btnCancelar.TabIndex = 11;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.btnAtualizar, "btnAtualizar");
+            this.errorProvider1.SetError(this.btnAtualizar, resources.GetString("btnAtualizar.Error"));
+            this.errorProvider1.SetIconAlignment(this.btnAtualizar, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("btnAtualizar.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.btnAtualizar, ((int)(resources.GetObject("btnAtualizar.IconPadding"))));
             this.btnAtualizar.Image = global::Agenda_C_Sharp.Properties.Resources.Refresh_icon;
-            this.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtualizar.Location = new System.Drawing.Point(466, 345);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(89, 45);
-            this.btnAtualizar.TabIndex = 12;
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAtualizar.UseVisualStyleBackColor = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnSair
             // 
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.btnSair, "btnSair");
+            this.errorProvider1.SetError(this.btnSair, resources.GetString("btnSair.Error"));
+            this.errorProvider1.SetIconAlignment(this.btnSair, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("btnSair.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.btnSair, ((int)(resources.GetObject("btnSair.IconPadding"))));
             this.btnSair.Image = global::Agenda_C_Sharp.Properties.Resources.Close_2_icon1;
-            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.Location = new System.Drawing.Point(561, 345);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(68, 45);
-            this.btnSair.TabIndex = 13;
-            this.btnSair.Text = "Sair";
-            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            resources.ApplyResources(this.errorProvider1, "errorProvider1");
             // 
             // FormContato
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 400);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnCancelar);
@@ -464,12 +431,9 @@
             this.Controls.Add(this.gbManutencao);
             this.Controls.Add(this.gbRegistros);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "FormContato";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Contato";
             this.gbRegistros.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.gbManutencao.ResumeLayout(false);
